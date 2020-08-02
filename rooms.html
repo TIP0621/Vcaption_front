@@ -10,9 +10,9 @@
   <div class="wrapper">
     <header class="header">
       <div class="headerInner">
-        <div class="createRoom">
+        <div class="createRoom buttonWrap">
           <input type="checkbox" name="createRoom" id="createRoom" class="checkCreateRoom" hidden>
-          <label for="createRoom" class="btnCreateRoom">
+          <label for="createRoom" class="btnCreateRoom button">
             <i class="fas fa-plus"></i>
             <span>新規ルーム作成</span>
           </label>
@@ -46,8 +46,8 @@
                   <p class="numberOfSelected">1 名</p>
                 </dd>
               </dl>
-              <div class="selectAll">
-                <a href="javascript:void(0)">全選択</a>
+              <div class="selectAll buttonWrap">
+                <a href="javascript:void(0)" class="button">全選択</a>
               </div>
               <ul class="selectMemberList">
                 <li>
@@ -55,7 +55,9 @@
                   <label for="userId" class="selectMember">名字 名前</label>
                 </li>
               </ul>
-              <input type="submit" value="ルーム作成">
+              <div class="submitCreateRoom buttonWrap">
+                <input type="submit" value="ルーム作成" class="btnSubmitCreateRoom button">
+              </div>
             </form>
           </div>
         </div>
@@ -81,9 +83,9 @@
                 <i class="fas fa-heart favoriteIcon dn"></i>
                 <i class="far fa-heart favoriteIcon"></i>
               </p>
-              <div class="roomDetailWrap">
+              <div class="roomDetailWrap buttonWrap">
                 <input type="radio" name="roomDetail" class="showRoomDetail" id="roomId1" hidden>
-                <label for="roomId1" class="btnShowRoomDetail">詳細を見る</label>
+                <label for="roomId1" class="btnShowRoomDetail button">詳細を見る</label>
                 <div class="roomDetail dn">
                   <label for="roomId1" class="closeRoomDetail">
                     <i class="fas fa-times"></i>
@@ -118,11 +120,11 @@
                             メンバーを退出させますか？
                           </p>
                           <ul class="actionBtn">
-                            <li class="btnCancel">
-                              <a href="#">キャンセル</a>
+                            <li class="btnCancel buttonWrap">
+                              <a href="#" class="button">キャンセル</a>
                             </li>
-                            <li class="btnSubmit">
-                              <a href="#">退出</a>
+                            <li class="btnSubmit buttonWrap">
+                              <a href="#" class="button">退出</a>
                             </li>
                           </ul>
                         </div>
@@ -142,11 +144,11 @@
                           ミーティングを開始しますか？
                         </p>
                         <ul class="actionBtn">
-                          <li class="btnCancel">
-                            <a href="#">キャンセル</a>
+                          <li class="btnCancel buttonWrap">
+                            <a href="#" class="button">キャンセル</a>
                           </li>
-                          <li class="btnSubmit">
-                            <a href="#">OK</a>
+                          <li class="btnSubmit buttonWrap">
+                            <a href="#" class="button">OK</a>
                           </li>
                         </ul>
                       </div>
@@ -161,11 +163,11 @@
                             ルームを削除しますか？
                           </p>
                           <ul class="actionBtn">
-                            <li class="btnCancel">
-                              <a href="#">キャンセル</a>
+                            <li class="btnCancel buttonWrap">
+                              <a href="#" class="button">キャンセル</a>
                             </li>
-                            <li class="btnSubmit">
-                              <a href="#">削除</a>
+                            <li class="btnSubmit buttonWrap">
+                              <a href="#" class="button">削除</a>
                             </li>
                           </ul>
                         </div>
@@ -183,8 +185,8 @@
                           <li class="btnCancel">
                             <a href="#">キャンセル</a>
                           </li>
-                          <li class="btnSubmit">
-                            <a href="#">退出</a>
+                          <li class="btnSubmit buttonWrap">
+                            <a href="#" class="button">退出</a>
                           </li>
                         </ul>
                       </div>
@@ -195,13 +197,24 @@
             </li>
             <li>
               <p class="roomImg active" style="background-image: url('/images/room_img_1.jpg');">
-                <span class="roomName">$ルーム名</span>
+                <span class="roomName">$ルーム名$ルーム名$ルーム名$ルーム名$ルーム名$ルーム名$ルーム名</span>
                 <i class="fas fa-heart favoriteIcon dn"></i>
                 <i class="far fa-heart favoriteIcon"></i>
               </p>
-              <div class="roomDetailWrap">
+              <div class="roomDetailWrap buttonWrap">
                 <input type="radio" name="roomDetail" class="showRoomDetail" id="roomId1" hidden>
-                <label for="roomId1" class="btnShowRoomDetail">詳細を見る</label>
+                <label for="roomId1" class="btnShowRoomDetail button">詳細を見る</label>
+              </div>
+            </li>
+            <li>
+              <p class="roomImg active" style="background-image: url('/images/room_img_1.jpg');">
+                <span class="roomName">$ルーム名$ルーム名$ルーム名$ルーム名$ルーム名$ルーム名$ルーム名$ルーム名$ルーム名$ルーム名$ルーム名$ルーム名$ルーム名$ルーム名$ルーム名$ルーム名$ルーム名$ルーム名$ルーム名$ルーム名$ルーム名$ルーム名$ルーム名$ルーム名$ルーム名$ルーム名$ルーム名$ルーム名</span>
+                <i class="fas fa-heart favoriteIcon dn"></i>
+                <i class="far fa-heart favoriteIcon"></i>
+              </p>
+              <div class="roomDetailWrap buttonWrap">
+                <input type="radio" name="roomDetail" class="showRoomDetail" id="roomId1" hidden>
+                <label for="roomId1" class="btnShowRoomDetail button">詳細を見る</label>
               </div>
             </li>
             <li>
@@ -210,9 +223,9 @@
                 <i class="fas fa-heart favoriteIcon dn"></i>
                 <i class="far fa-heart favoriteIcon"></i>
               </p>
-              <div class="roomDetailWrap">
+              <div class="roomDetailWrap buttonWrap">
                 <input type="radio" name="roomDetail" class="showRoomDetail" id="roomId1" hidden>
-                <label for="roomId1" class="btnShowRoomDetail">詳細を見る</label>
+                <label for="roomId1" class="btnShowRoomDetail button">詳細を見る</label>
               </div>
             </li>
             <li>
@@ -221,9 +234,9 @@
                 <i class="fas fa-heart favoriteIcon dn"></i>
                 <i class="far fa-heart favoriteIcon"></i>
               </p>
-              <div class="roomDetailWrap">
+              <div class="roomDetailWrap buttonWrap">
                 <input type="radio" name="roomDetail" class="showRoomDetail" id="roomId1" hidden>
-                <label for="roomId1" class="btnShowRoomDetail">詳細を見る</label>
+                <label for="roomId1" class="btnShowRoomDetail button">詳細を見る</label>
               </div>
             </li>
             <li>
@@ -232,9 +245,9 @@
                 <i class="fas fa-heart favoriteIcon dn"></i>
                 <i class="far fa-heart favoriteIcon"></i>
               </p>
-              <div class="roomDetailWrap">
+              <div class="roomDetailWrap buttonWrap">
                 <input type="radio" name="roomDetail" class="showRoomDetail" id="roomId1" hidden>
-                <label for="roomId1" class="btnShowRoomDetail">詳細を見る</label>
+                <label for="roomId1" class="btnShowRoomDetail button">詳細を見る</label>
               </div>
             </li>
             <li>
@@ -243,9 +256,9 @@
                 <i class="fas fa-heart favoriteIcon dn"></i>
                 <i class="far fa-heart favoriteIcon"></i>
               </p>
-              <div class="roomDetailWrap">
+              <div class="roomDetailWrap buttonWrap">
                 <input type="radio" name="roomDetail" class="showRoomDetail" id="roomId1" hidden>
-                <label for="roomId1" class="btnShowRoomDetail">詳細を見る</label>
+                <label for="roomId1" class="btnShowRoomDetail button">詳細を見る</label>
               </div>
             </li>
             <li>
@@ -254,9 +267,9 @@
                 <i class="fas fa-heart favoriteIcon dn"></i>
                 <i class="far fa-heart favoriteIcon"></i>
               </p>
-              <div class="roomDetailWrap">
+              <div class="roomDetailWrap buttonWrap">
                 <input type="radio" name="roomDetail" class="showRoomDetail" id="roomId1" hidden>
-                <label for="roomId1" class="btnShowRoomDetail">詳細を見る</label>
+                <label for="roomId1" class="btnShowRoomDetail button">詳細を見る</label>
               </div>
             </li>
             <li>
@@ -265,9 +278,9 @@
                 <i class="fas fa-heart favoriteIcon dn"></i>
                 <i class="far fa-heart favoriteIcon"></i>
               </p>
-              <div class="roomDetailWrap">
+              <div class="roomDetailWrap buttonWrap">
                 <input type="radio" name="roomDetail" class="showRoomDetail" id="roomId1" hidden>
-                <label for="roomId1" class="btnShowRoomDetail">詳細を見る</label>
+                <label for="roomId1" class="btnShowRoomDetail button">詳細を見る</label>
               </div>
             </li>
             <li>
@@ -276,9 +289,9 @@
                 <i class="fas fa-heart favoriteIcon dn"></i>
                 <i class="far fa-heart favoriteIcon"></i>
               </p>
-              <div class="roomDetailWrap">
+              <div class="roomDetailWrap buttonWrap">
                 <input type="radio" name="roomDetail" class="showRoomDetail" id="roomId1" hidden>
-                <label for="roomId1" class="btnShowRoomDetail">詳細を見る</label>
+                <label for="roomId1" class="btnShowRoomDetail button">詳細を見る</label>
               </div>
             </li>
             <li>
@@ -287,9 +300,9 @@
                 <i class="fas fa-heart favoriteIcon dn"></i>
                 <i class="far fa-heart favoriteIcon"></i>
               </p>
-              <div class="roomDetailWrap">
+              <div class="roomDetailWrap buttonWrap">
                 <input type="radio" name="roomDetail" class="showRoomDetail" id="roomId1" hidden>
-                <label for="roomId1" class="btnShowRoomDetail">詳細を見る</label>
+                <label for="roomId1" class="btnShowRoomDetail button">詳細を見る</label>
               </div>
             </li>
             <li>
@@ -298,9 +311,9 @@
                 <i class="fas fa-heart favoriteIcon dn"></i>
                 <i class="far fa-heart favoriteIcon"></i>
               </p>
-              <div class="roomDetailWrap">
+              <div class="roomDetailWrap buttonWrap">
                 <input type="radio" name="roomDetail" class="showRoomDetail" id="roomId1" hidden>
-                <label for="roomId1" class="btnShowRoomDetail">詳細を見る</label>
+                <label for="roomId1" class="btnShowRoomDetail button">詳細を見る</label>
               </div>
             </li>
             <li>
@@ -309,20 +322,9 @@
                 <i class="fas fa-heart favoriteIcon dn"></i>
                 <i class="far fa-heart favoriteIcon"></i>
               </p>
-              <div class="roomDetailWrap">
+              <div class="roomDetailWrap buttonWrap">
                 <input type="radio" name="roomDetail" class="showRoomDetail" id="roomId1" hidden>
-                <label for="roomId1" class="btnShowRoomDetail">詳細を見る</label>
-              </div>
-            </li>
-            <li>
-              <p class="roomImg active" style="background-image: url('/images/room_img_1.jpg');">
-                <span class="roomName">$ルーム名</span>
-                <i class="fas fa-heart favoriteIcon dn"></i>
-                <i class="far fa-heart favoriteIcon"></i>
-              </p>
-              <div class="roomDetailWrap">
-                <input type="radio" name="roomDetail" class="showRoomDetail" id="roomId1" hidden>
-                <label for="roomId1" class="btnShowRoomDetail">詳細を見る</label>
+                <label for="roomId1" class="btnShowRoomDetail button">詳細を見る</label>
               </div>
             </li>
           </ul>
