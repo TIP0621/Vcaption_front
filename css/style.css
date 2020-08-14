@@ -369,9 +369,27 @@ input[type="checkbox"]:checked ~ .actionModal {
   height: 34px;
 }
 .selectMemberList {
+  display: flex;
+  flex-wrap: wrap;
   height: 120px;
   margin-top: 20px;
   overflow: auto;
+}
+.selectMemberList > li {
+  position: relative;
+  width: 20%;
+}
+.selectMemberCheck {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.selectMember {
+  display: block;
+  width: 100%;
+  height: 28px;
+  padding-left: 20px;
 }
 .submitCreateRoom {
   height: 38px;
