@@ -720,3 +720,85 @@ input[type="checkbox"]:checked ~ .actionModal {
   background: #deda1f;
   border-bottom-color: #737112;
 }
+
+
+
+
+
+
+/* チャットルーム */
+.chatRoomBox {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-wrap: nowrap;
+	flex-wrap: nowrap;
+	-webkit-justify-content: flex-start;
+	justify-content: flex-start;
+	-webkit-align-items: stretch;
+	align-items: stretch;
+}
+.chatRoom {
+  width: calc(100vw - 300px);
+  font-size: 0;
+}
+.chatMember {
+  display: inline-block;
+  margin: 0px;
+  width: 50%;
+  height: 50vh;
+  border: 1px solid grey;
+  font-size: 14px;
+  min-height: calc(768px / 2);
+}
+.chatAndCaptionBox {
+  display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column-reverse;
+	flex-direction: column-reverse;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-align-items: stretch;
+  align-items: stretch;
+  width: 300px;
+}
+.chat {
+  height: calc(100vh - 50%);
+  border: 1px solid grey;
+}
+.caption {
+  height: 100vh;
+  border: 1px solid lightgrey;
+}
+.chat > p, .caption > p {
+  border-bottom: 1px solid gray;
+}
+.chatBox {
+}
+.memberTalk {
+  padding: 10px;
+}
+.memberInfo > img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-position: left top;
+  display: inline-block;
+}
+.memberInfo > p {
+  display: inline-block;
+  padding-left: 5px;
+}
+.memberTalkMessage {
+  display: inline-block;
+  padding: 5px;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+.buttonList, .buttonList > ul, .buttonList > ul > li  {
+  display: inline-block;
+}
+.buttonList {
+  position: fixed;
+  left: 300px;
+  bottom: 50px;
+}
