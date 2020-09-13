@@ -670,8 +670,8 @@ input[type="checkbox"]:checked ~ .actionModal {
 .btnDeleteRoomMember {
   width: 40px;
   height: 25px;
-  background: #deda1f;
-  border-bottom-color: #737112;
+  background: #e8e790;
+  border-bottom-color: #908e2a;
 }
 .btnDeleteRoomMember:active {
   height: 23px;
@@ -717,8 +717,8 @@ input[type="checkbox"]:checked ~ .actionModal {
   color: #fff;
 }
 .btnLeaveChatRoom {
-  background: #deda1f;
-  border-bottom-color: #737112;
+  background: #e8e790;
+  border-bottom-color: #908e2a;
 }
 
 
