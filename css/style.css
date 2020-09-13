@@ -771,6 +771,9 @@ input[type="checkbox"]:checked ~ .actionModal {
 }
 .chat > p, .caption > p {
   border-bottom: 1px solid gray;
+  padding-left: 5px;
+  background-color: rgba(98, 79, 187, 0.9);
+  color: white;
 }
 .chatBox {
 }
