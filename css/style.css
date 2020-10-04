@@ -763,14 +763,18 @@ main {
   -webkit-align-items: stretch;
   align-items: stretch;
   width: 300px;
+  height: 100vh;
 }
 .chat {
-  height: calc(100vh - 50%);
+  height: calc(40vh);
   border: 1px solid grey;
 }
 .caption {
   height: 100vh;
   border: 1px solid lightgrey;
+}
+.chat+.caption {
+  height: 60vh;
 }
 .chat > p, .caption > p {
   border-bottom: 1px solid gray;
@@ -797,6 +801,16 @@ main {
   padding: 5px;
   border: 1px solid gray;
   border-radius: 10px;
+}
+.regTxt {
+  margin-top: 190px;
+  margin-left: 3px;
+}
+.txt {
+  width: 235px;
+}
+.submitBtn {
+  border: 0;
 }
 .buttonList, .buttonList > ul, .buttonList > ul > li  {
   display: inline-block;
