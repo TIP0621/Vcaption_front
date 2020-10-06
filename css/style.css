@@ -730,69 +730,60 @@ input[type="checkbox"]:checked ~ .actionModal {
 main {
   display: flex;;
 }
-.chatRoomBox {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-justify-content: flex-start;
-  justify-content: flex-start;
-  -webkit-align-items: stretch;
-  align-items: stretch;
-}
 .chatRoom {
-  width: calc(100vw - 300px);
+  width: calc(100% - 300px);
   font-size: 0;
 }
-.chatMember {
+.chatRoom > li {
   display: inline-block;
-  margin: 0px;
+  min-height: calc(768px / 2);
   width: 50%;
   height: 50vh;
   border: 1px solid grey;
-  font-size: 14px;
-  min-height: calc(768px / 2);
+  position: relative;
+  overflow: hidden;
+  margin: 0px;
+}
+.chatRoom > li > video {
+  height: 50vh;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
 }
 .chatAndCaptionBox {
-  display: -webkit-flex;
   display: flex;
-  -webkit-flex-direction: column-reverse;
   flex-direction: column-reverse;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: stretch;
-  align-items: stretch;
   width: 300px;
   height: 100vh;
 }
+.chatAndCaption > .subttl {
+  padding-left: 5px;
+  background-color: rgba(98, 79, 187, 0.9);
+  color: white;
+  border-bottom: 1px solid gray;
+}
 .chat {
-  height: calc(40vh);
+  height: 40vh;
   border: 1px solid grey;
 }
 .caption {
   height: 100vh;
-  border: 1px solid lightgrey;
+  border: 1px solid grey;
 }
 .chat+.caption {
   height: 60vh;
 }
-.chat > p, .caption > p {
-  border-bottom: 1px solid gray;
-  padding-left: 5px;
-  background-color: rgba(98, 79, 187, 0.9);
-  color: white;
-}
 .memberTalk {
   padding: 10px;
 }
-.memberInfo > img {
+.memberInfo > .memberImg {
+  display: inline-block;
   width: 25px;
   height: 25px;
   border-radius: 50%;
   background-position: left top;
-  display: inline-block;
 }
-.memberInfo > p {
+.memberInfo > .memberName {
   display: inline-block;
   padding-left: 5px;
 }
@@ -802,9 +793,16 @@ main {
   border: 1px solid gray;
   border-radius: 10px;
 }
+.memberBox {
+  height: 37vh;
+  position: relative;
+}
 .regTxt {
-  margin-top: 190px;
-  margin-left: 3px;
+  position: absolute;
+  width: 100%;
+  bottom: 5px;
+  border-top: 1px solid gray;
+  background-color: white;
 }
 .txt {
   width: 235px;
