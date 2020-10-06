@@ -817,13 +817,14 @@ main {
 .regTxtBox {
   position: absolute;
   width: 100%;
-  bottom: 5px;
+  bottom: 0;
   border-top: 1px solid gray;
   background-color: white;
+  padding: 4px;
+
 }
 .regTxt {
   text-align: center;
-  margin: 3px 0;
 }
 .txt {
   width: 240px;
