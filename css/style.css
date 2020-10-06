@@ -221,6 +221,14 @@ input[type="checkbox"]:checked ~ .backgroundLayer {
   color: #000000;
   z-index: 110;
 }
+.createRoom {
+  width: 700px;
+  height: 500px;
+}
+.editRoomModal {
+  width: 700px;
+  height: 450px;
+}
 input[type="checkbox"]:checked ~ .actionModal {
   display: block !important;
 }
@@ -670,15 +678,23 @@ input[type="checkbox"]:checked ~ .actionModal {
 .btnDeleteRoomMember {
   width: 40px;
   height: 25px;
-  background: #deda1f;
-  border-bottom-color: #737112;
+  background: #e8e790;
+  border-bottom-color: #908e2a;
 }
 .btnDeleteRoomMember:active {
   height: 23px;
 }
-.addMember {
+.addMemberBtn {
+  display: block;
   text-align: right;
-  padding-right: 10px;
+}
+.fa-user-plus {
+  display: inline-block;
+  width: 30px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  text-align: center;
+  cursor: pointer;
 }
 .actionBtnList {
   display: flex;
@@ -717,8 +733,8 @@ input[type="checkbox"]:checked ~ .actionModal {
   color: #fff;
 }
 .btnLeaveChatRoom {
-  background: #deda1f;
-  border-bottom-color: #737112;
+  background: #e8e790;
+  border-bottom-color: #908e2a;
 }
 
 
@@ -766,64 +782,64 @@ input[type="checkbox"]:checked ~ .actionModal {
 
 
 /* チャットルーム */
-.chatRoomBox {
-	display: -webkit-flex;
-	display: flex;
-	-webkit-flex-wrap: nowrap;
-	flex-wrap: nowrap;
-	-webkit-justify-content: flex-start;
-	justify-content: flex-start;
-	-webkit-align-items: stretch;
-	align-items: stretch;
+main {
+  display: flex;;
 }
 .chatRoom {
-  width: calc(100vw - 300px);
+  width: calc(100% - 300px);
+  min-height: 768px;
   font-size: 0;
 }
-.chatMember {
+.chatRoom > li {
   display: inline-block;
-  margin: 0px;
   width: 50%;
-  height: 50vh;
+  height: 50%;
   border: 1px solid grey;
-  font-size: 14px;
-  min-height: calc(768px / 2);
+  position: relative;
+  overflow: hidden;
+  margin: 0px;
+}
+.chatRoom > li > video {
+  height: 50vh;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
 }
 .chatAndCaptionBox {
-  display: -webkit-flex;
-	display: flex;
-	-webkit-flex-direction: column-reverse;
-	flex-direction: column-reverse;
-	-webkit-justify-content: center;
-	justify-content: center;
-	-webkit-align-items: stretch;
-  align-items: stretch;
+  display: flex;
+  flex-direction: column-reverse;
   width: 300px;
+  height: 100vh;
+  min-height: 768px;
+}
+.chatAndCaption > .subttl {
+  padding-left: 5px;
+  background-color: rgba(98, 79, 187, 0.9);
+  color: white;
+  border-bottom: 1px solid gray;
 }
 .chat {
-  height: calc(100vh - 50%);
+  height: 40%;
   border: 1px solid grey;
 }
 .caption {
-  height: 100vh;
-  border: 1px solid lightgrey;
+  height: 100%;
+  border: 1px solid grey;
 }
-.chat > p, .caption > p {
-  border-bottom: 1px solid gray;
-}
-.chatBox {
+.chat+.caption {
+  height: 60%;
 }
 .memberTalk {
   padding: 10px;
 }
-.memberInfo > img {
+.memberInfo > .memberImg {
+  display: inline-block;
   width: 25px;
   height: 25px;
   border-radius: 50%;
   background-position: left top;
-  display: inline-block;
 }
-.memberInfo > p {
+.memberInfo > .memberName {
   display: inline-block;
   padding-left: 5px;
 }
@@ -832,6 +848,28 @@ input[type="checkbox"]:checked ~ .actionModal {
   padding: 5px;
   border: 1px solid gray;
   border-radius: 10px;
+}
+.memberBox {
+  position: relative;
+  height: 93%
+}
+.regTxtBox {
+  position: absolute;
+  width: 100%;
+  bottom: 5px;
+  border-top: 1px solid gray;
+  background-color: white;
+}
+.regTxt {
+  text-align: center;
+  margin: 3px 0;
+}
+.txt {
+  width: 240px;
+}
+.submitBtn {
+  width: 45px;
+  border: 0;
 }
 .buttonList, .buttonList > ul, .buttonList > ul > li  {
   display: inline-block;
