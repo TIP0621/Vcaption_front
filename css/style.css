@@ -212,8 +212,8 @@ input[type="checkbox"]:checked ~ .backgroundLayer {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 700px;
-  height: 500px;
+  width: 500px;
+  height: 300px;
   padding: 30px 50px;
   background: #ffffff;
   border: 1px solid #777777;
@@ -720,6 +720,45 @@ input[type="checkbox"]:checked ~ .actionModal {
   background: #deda1f;
   border-bottom-color: #737112;
 }
+
+
+
+.actionBtn {
+  text-align: center;
+}
+.actionBtn > li {
+  display: inline-block;
+  width: 100px;
+  height: 40px;
+}
+.actionBtn > li > a {
+  display: inline-block;
+  width: 100px;
+  height: 40px;
+}
+.descriptionAction {
+  text-align: center;
+}
+.btnCancel {
+  background: #deda1f;
+  border-bottom-color: #737112;
+  line-height: 34px;
+}
+.btnCancel:active {
+  height: 35px;
+}
+.btnSubmit {
+  background: #62cc7a;
+  border-bottom-color: #337141;
+  line-height: 34px;
+}
+.btnSubmit:active {
+  height: 35px;
+}
+
+
+
+
 
 
 
