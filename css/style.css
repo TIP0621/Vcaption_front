@@ -748,13 +748,13 @@ main {
 }
 .chatRoom {
   width: calc(100% - 300px);
+  min-height: 768px;
   font-size: 0;
 }
 .chatRoom > li {
   display: inline-block;
-  min-height: calc(768px / 2);
   width: 50%;
-  height: 50vh;
+  height: 50%;
   border: 1px solid grey;
   position: relative;
   overflow: hidden;
@@ -771,6 +771,7 @@ main {
   flex-direction: column-reverse;
   width: 300px;
   height: 100vh;
+  min-height: 768px;
 }
 .chatAndCaption > .subttl {
   padding-left: 5px;
@@ -779,15 +780,15 @@ main {
   border-bottom: 1px solid gray;
 }
 .chat {
-  height: 40vh;
+  height: 40%;
   border: 1px solid grey;
 }
 .caption {
-  height: 100vh;
+  height: 100%;
   border: 1px solid grey;
 }
 .chat+.caption {
-  height: 60vh;
+  height: 60%;
 }
 .memberTalk {
   padding: 10px;
@@ -810,20 +811,25 @@ main {
   border-radius: 10px;
 }
 .memberBox {
-  height: 37vh;
   position: relative;
+  height: 93%
 }
-.regTxt {
+.regTxtBox {
   position: absolute;
   width: 100%;
   bottom: 5px;
   border-top: 1px solid gray;
   background-color: white;
 }
+.regTxt {
+  text-align: center;
+  margin: 3px 0;
+}
 .txt {
-  width: 235px;
+  width: 240px;
 }
 .submitBtn {
+  width: 45px;
   border: 0;
 }
 .buttonList, .buttonList > ul, .buttonList > ul > li  {
