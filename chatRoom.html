@@ -52,18 +52,16 @@
           </div>
         </div>
       </div>
-      <div class="buttonList">
-        <ul>
-          <li><i class="fas fa-video"></i>カメラ</li>
-          <li><i class="fas fa-microphone">マイク</i></li>
-          <li><i class="fas fa-comment-dots">チャット</i></li>
-          <li><i class="fas fa-thumbs-up">絵文字</i></li>
-          <li class="modalClassSyncer shareScreen" onclick="openModal('shareScreen');">画面共有</li>
-          <li class="modalClassSyncer memberList" onclick="openModal('memberList');"><i class="fas fa-users"></i>メンバー</li>
-          <li class="modalClassSyncer invite" onclick="openModal('invite');"><i class="fas fa-user-plus">メンバー追加</i></li>
-          <li class="modalClassSyncer exit" onclick="openModal('exit');"><i class="fas fa-times">退出</i></li>
-        </ul>
-      </div>
+      <ul class="buttonList">
+        <li><i class="fas fa-video"></i>カメラ</li>
+        <li><i class="fas fa-microphone">マイク</i></li>
+        <li><i class="fas fa-comment-dots">チャット</i></li>
+        <li><i class="fas fa-thumbs-up">絵文字</i></li>
+        <li class="modalClassSyncer shareScreen" onclick="openModal('shareScreen');">画面共有</li>
+        <li class="modalClassSyncer memberList" onclick="openModal('memberList');"><i class="fas fa-users"></i>メンバー</li>
+        <li class="modalClassSyncer invite" onclick="openModal('invite');"><i class="fas fa-user-plus">メンバー追加</i></li>
+        <li class="modalClassSyncer exit" onclick="openModal('exit');"><i class="fas fa-times">退出</i></li>
+      </ul>
       <div class="detail modal-syncer modal-content" data-target="shareScreen" id="shareScreen" style="display: none;">
         <p>画面共有を開始します。</p>
         <button>キャンセル</button>

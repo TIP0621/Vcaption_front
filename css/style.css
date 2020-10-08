@@ -221,7 +221,7 @@ input[type="checkbox"]:checked ~ .backgroundLayer {
   color: #000000;
   z-index: 110;
 }
-.createRoom {
+.createRoomModal {
   width: 700px;
   height: 500px;
 }
@@ -533,7 +533,7 @@ input[type="checkbox"]:checked ~ .actionModal {
   width: 300px;
   padding: 25px;
   background: #eeeeee;
-  z-index: 20;
+  z-index: 50;
   transition: all 0.5s;
 }
 .roomDetailInner {
@@ -789,20 +789,20 @@ main {
   width: calc(100% - 300px);
   min-height: 768px;
   font-size: 0;
+  text-align: center;
 }
 .chatRoom > li {
   display: inline-block;
+  position: relative;
   width: 50%;
   height: 50%;
   border: 1px solid grey;
-  position: relative;
   overflow: hidden;
-  margin: 0px;
 }
 .chatRoom > li > video {
-  height: 50vh;
   position: absolute;
   left: 50%;
+  height: 100%;
   transform: translate(-50%);
 }
 .chatAndCaptionBox {
@@ -815,16 +815,16 @@ main {
 .chatAndCaption > .subttl {
   padding-left: 5px;
   background-color: rgba(98, 79, 187, 0.9);
-  color: white;
   border-bottom: 1px solid gray;
+  color: #ffffff;
 }
 .chat {
   height: 40%;
-  border: 1px solid grey;
+  border: 1px solid #cccccc;
 }
 .caption {
   height: 100%;
-  border: 1px solid grey;
+  border: 1px solid #cccccc;
 }
 .chat+.caption {
   height: 60%;
@@ -832,21 +832,21 @@ main {
 .memberTalk {
   padding: 10px;
 }
-.memberInfo > .memberImg {
+.memberImg {
   display: inline-block;
   width: 25px;
   height: 25px;
   border-radius: 50%;
   background-position: left top;
 }
-.memberInfo > .memberName {
+.memberName {
   display: inline-block;
   padding-left: 5px;
 }
 .memberTalkMessage {
   display: inline-block;
   padding: 5px;
-  border: 1px solid gray;
+  border: 1px solid #cccccc;
   border-radius: 10px;
 }
 .memberBox {
@@ -857,12 +857,12 @@ main {
   position: absolute;
   width: 100%;
   bottom: 5px;
-  border-top: 1px solid gray;
-  background-color: white;
+  border-top: 1px solid #cccccc;
+  background-color: #ffffff;
 }
 .regTxt {
-  text-align: center;
   margin: 3px 0;
+  text-align: center;
 }
 .txt {
   width: 240px;
@@ -871,7 +871,8 @@ main {
   width: 45px;
   border: 0;
 }
-.buttonList, .buttonList > ul, .buttonList > ul > li  {
+.buttonList,
+.buttonList > li  {
   display: inline-block;
 }
 .buttonList {
