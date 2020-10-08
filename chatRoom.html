@@ -5,29 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>チャットルーム / Vcaption</title>
   <link rel="stylesheet" href="/css/style.css">
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 </head>
 <body>
   <div class="wrapper">
     <main>
-      <ul class="chatRoom">
-        <li><video src=""></video></li>
-        <li><video src=""></video></li>
-        <li><video src=""></video></li>
-        <li><video src=""></video></li>
-      </ul>
+      <div class="chatRoomWrap">
+        <ul class="chatRoom">
+          <li><video src=""></video></li>
+          <li><video src=""></video></li>
+          <li><video src=""></video></li>
+          <li><video src=""></video></li>
+        </ul>
+        <ul class="chatActionBtn">
+          <li>
+            <i class="fas fa-video"></i>
+          </li>
+          <li>
+            <i class="fas fa-microphone"></i>
+          </li>
+          <li class="modalClassSyncer memberList" onclick="openModal('memberList');">
+            <i class="fas fa-users"></i>
+          </li>
+          <li class="modalClassSyncer invite" onclick="openModal('invite');">
+            <i class="fas fa-user-plus"></i>
+          </li>
+          <li class="modalClassSyncer exit" onclick="openModal('exit');">
+            <i class="fas fa-times"></i>
+          </li>
+        </ul>
+      </div>
       <div class="chatAndCaptionBox">
         <div class="chat chatAndCaption">
           <h4 class="subttl">チャット</h4>
-          <div class="memberBox">
-            <div class="memberTalk">
-              <div class="memberInfo">
-                <img class="memberImg" src="/images/room_img_1.jpg" alt="">
-                <p class="memberName">有馬哲平</p>
-              </div>
-              <p class="memberTalkMessage">チャットメッセージ</p>
-            </div>
+          <div class="memberChatTxt">
+            <ul class="memberTalk">
+              <li>
+                <div class="memberInfo">
+                  <img class="memberImg" src="/images/room_img_1.jpg" alt="">
+                  <p class="memberName">有馬哲平</p>
+                </div>
+                <p class="memberTalkMessage">チャットメッセージ</p>
+              </li>
+            </ul>
             <form action="" class="regTxtBox">
-              <div class="regTxt">
+              <div class="regTxt buttonWrap">
                 <input type="text" class="txt">
                 <input type="submit" class="submitBtn button" value="送信">
               </div>
@@ -36,52 +58,48 @@
         </div>
         <div class="caption chatAndCaption">
           <h4 class="subttl">字幕</h4>
-          <div class="memberTalk">
-            <div class="memberInfo">
-              <img class="memberImg" src="/images/room_img_1.jpg" alt="">
-              <p class="memberName">有馬哲平</p>
-            </div>
-            <p class="memberTalkMessage">チャットメッセージ</p>
-          </div>
-          <div class="memberTalk">
-            <div class="memberInfo">
-              <img class="memberImg" src="/images/room_img_1.jpg" alt="">
-              <p class="memberName">有馬哲平</p>
-            </div>
-            <p class="memberTalkMessage">チャットメッセージチャットメッセージチャットメッセージチャットメッセージ</p>
-          </div>
+          <ul class="memberTalk">
+            <li>
+              <div class="memberInfo">
+                <img class="memberImg" src="/images/room_img_1.jpg" alt="">
+                <p class="memberName">有馬哲平</p>
+              </div>
+              <p class="memberTalkMessage">字幕</p>
+            </li>
+            <li>
+              <div class="memberInfo">
+                <img class="memberImg" src="/images/room_img_1.jpg" alt="">
+                <p class="memberName">有馬哲平</p>
+              </div>
+              <p class="memberTalkMessage">字幕字幕字幕字幕字幕字幕字幕字幕字幕字幕字幕字幕字幕字幕字幕字幕字幕字幕字幕字幕字幕字幕</p>
+            </li>
+            <li class="own">
+              <div class="memberInfo">
+                <img class="memberImg" src="/images/room_img_1.jpg" alt="">
+                <p class="memberName">有馬哲平</p>
+              </div>
+              <p class="memberTalkMessage">字幕字幕字幕字幕字幕字幕字幕字幕字幕字幕字幕字幕字幕字幕字幕字幕字幕字幕字幕字幕字幕字幕</p>
+            </li>
+          </ul>
         </div>
       </div>
-      <ul class="buttonList">
-        <li><i class="fas fa-video"></i>カメラ</li>
-        <li><i class="fas fa-microphone">マイク</i></li>
-        <li><i class="fas fa-comment-dots">チャット</i></li>
-        <li><i class="fas fa-thumbs-up">絵文字</i></li>
-        <li class="modalClassSyncer shareScreen" onclick="openModal('shareScreen');">画面共有</li>
-        <li class="modalClassSyncer memberList" onclick="openModal('memberList');"><i class="fas fa-users"></i>メンバー</li>
-        <li class="modalClassSyncer invite" onclick="openModal('invite');"><i class="fas fa-user-plus">メンバー追加</i></li>
-        <li class="modalClassSyncer exit" onclick="openModal('exit');"><i class="fas fa-times">退出</i></li>
-      </ul>
-      <div class="detail modal-syncer modal-content" data-target="shareScreen" id="shareScreen" style="display: none;">
-        <p>画面共有を開始します。</p>
-        <button>キャンセル</button>
-        <button>OK</button>
-      </div>
-      <div class="detail modal-syncer modal-content" data-target="memberList" id="memberList" style="display: none;">
-        <p>参加者一覧</p>
-      </div>
-      <div class="" style="display: none;">
-        <p>参加者管理</p>
-      </div>
-      <div class="detail modal-syncer modal-content" data-target="invite" id="invite" style="display: none;">
-        <p>参加者招待</p>
-      </div>
-      <div class="detail modal-syncer modal-content" data-target="exit" id="exit" style="display: none;">
-        <p>ルームから退出しますか？</p>
-        <button>キャンセル</button>
-        <button>OK</button>
-      </div>
     </main>
+    <div class="detail modal-syncer modal-content dn" data-target="memberList" id="memberList">
+      <p>参加者一覧</p>
+    </div>
+    <div class="detail modal-syncer modal-content dn">
+      <p>参加者管理</p>
+    </div>
+    <div class="detail modal-syncer modal-content dn" data-target="invite" id="invite">
+      <p>参加者招待</p>
+    </div>
+    <div class="detail modal-syncer modal-content dn" data-target="exit" id="exit">
+      <p>ルームから退出しますか？</p>
+      <button>キャンセル</button>
+      <button>OK</button>
+    </div>
   </div>
+  <script type="text/javascript" src="/js/jquery-3.5.1.min.js"></script>
+  <script type="text/javascript" src="/js/common.js"></script>
 </body>
 </html>
