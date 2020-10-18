@@ -754,27 +754,41 @@ input[type="checkbox"]:checked ~ .actionModal {
 }
 .descriptionAction {
   text-align: center;
+  height: 100px;
 }
 .btnCancel {
-  background: #deda1f;
+  height: 38px;
+  background-color: #deda1f;
   border-bottom-color: #737112;
-  line-height: 34px;
+  font-size: 16px;
+  line-height: 36px;
+  border-radius:4px;
 }
 .btnCancel:active {
-  height: 35px;
+  height: 36px;
 }
 .btnSubmit {
-  background: #62cc7a;
-  border-bottom-color: #337141;
-  line-height: 34px;
+  height: 38px;
+  background-color: #62cc7a;
+  border-bottom-color: #737112;
+  font-size: 16px;
+  line-height: 36px;
+  border-radius:4px;
 }
 .btnSubmit:active {
-  height: 35px;
+  height: 36px;
 }
-
-
-
-
+.btnOk {
+  height: 38px;
+  background-color: #deda1f;
+  border-bottom-color: #737112;
+  font-size: 16px;
+  line-height: 36px;
+  border-radius:4px;
+}
+.btnOk:active {
+  height: 36px;
+}
 
 
 
