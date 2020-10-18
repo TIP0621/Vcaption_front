@@ -212,8 +212,8 @@ input[type="checkbox"]:checked ~ .backgroundLayer {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 700px;
-  height: 500px;
+  width: 500px;
+  height: 300px;
   padding: 30px 50px;
   background: #ffffff;
   border: 1px solid #777777;
@@ -221,7 +221,7 @@ input[type="checkbox"]:checked ~ .backgroundLayer {
   color: #000000;
   z-index: 110;
 }
-.createRoom {
+.createRoomModal {
   width: 700px;
   height: 500px;
 }
@@ -533,7 +533,7 @@ input[type="checkbox"]:checked ~ .actionModal {
   width: 300px;
   padding: 25px;
   background: #eeeeee;
-  z-index: 20;
+  z-index: 50;
   transition: all 0.5s;
 }
 .roomDetailInner {
@@ -739,6 +739,45 @@ input[type="checkbox"]:checked ~ .actionModal {
 
 
 
+.actionBtn {
+  text-align: center;
+}
+.actionBtn > li {
+  display: inline-block;
+  width: 100px;
+  height: 40px;
+}
+.actionBtn > li > a {
+  display: inline-block;
+  width: 100px;
+  height: 40px;
+}
+.descriptionAction {
+  text-align: center;
+}
+.btnCancel {
+  background: #deda1f;
+  border-bottom-color: #737112;
+  line-height: 34px;
+}
+.btnCancel:active {
+  height: 35px;
+}
+.btnSubmit {
+  background: #62cc7a;
+  border-bottom-color: #337141;
+  line-height: 34px;
+}
+.btnSubmit:active {
+  height: 35px;
+}
+
+
+
+
+
+
+
 
 
 
@@ -746,25 +785,73 @@ input[type="checkbox"]:checked ~ .actionModal {
 main {
   display: flex;;
 }
-.chatRoom {
+.chatRoomWrap {
+  position: relative;
   width: calc(100% - 300px);
   min-height: 768px;
+}
+.chatRoom {
+  width: 100%;
+  height: 100%;
   font-size: 0;
+  text-align: center;
 }
 .chatRoom > li {
   display: inline-block;
+  position: relative;
   width: 50%;
   height: 50%;
-  border: 1px solid grey;
-  position: relative;
+  border: 1px solid #cccccc;
   overflow: hidden;
-  margin: 0px;
 }
 .chatRoom > li > video {
-  height: 50vh;
   position: absolute;
   left: 50%;
+  height: 100%;
   transform: translate(-50%);
+}
+.chatActionBtn {
+  display: flex;
+  position: absolute;
+  left: 50%;
+  bottom: 50px;
+  transform: translateX(-50%);
+  padding: 5px 10px;
+  background: rgba(0,0,0,0.6);
+  border-radius: 6px;
+  font-size: 0;
+}
+.chatActionBtn > li {
+  width: 70px;
+  height: 50px;
+  line-height: 1;
+  text-align: center;
+}
+.chatActionBtn > li + li {
+  position: relative;
+  margin-left: 2px;
+}
+.chatActionBtn > li + li:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: -2px;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 20px;
+  background: #ffffff;
+}
+.chatActionBtn > li > i {
+  font-size: 30px;
+  color: #ffffff;
+}
+.chatActionBtn > li:after {
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 100%;
+  vertical-align: middle;
 }
 .chatAndCaptionBox {
   display: flex;
@@ -776,53 +863,89 @@ main {
 .chatAndCaption > .subttl {
   padding-left: 5px;
   background-color: rgba(98, 79, 187, 0.9);
-  color: white;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid #cccccc;
+  color: #ffffff;
 }
 .chat {
   height: 40%;
-  border: 1px solid grey;
+  border: 1px solid #cccccc;
 }
 .caption {
   height: 100%;
-  border: 1px solid grey;
+  border: 1px solid #cccccc;
 }
-.chat+.caption {
+.chat + .caption {
   height: 60%;
 }
 .memberTalk {
+  height: calc(100% - 26px);
   padding: 10px;
+  overflow: auto;
 }
-.memberInfo > .memberImg {
+.memberChatTxt > .memberTalk {
+  height: calc(100% - 42px);
+}
+.memberTalk > li + li {
+  margin-top: 20px;
+}
+.own > .memberInfo {
+  text-align: right;
+}
+.memberImg {
   display: inline-block;
   width: 25px;
   height: 25px;
   border-radius: 50%;
   background-position: left top;
 }
-.memberInfo > .memberName {
+.memberName {
   display: inline-block;
   padding-left: 5px;
 }
 .memberTalkMessage {
   display: inline-block;
-  padding: 5px;
-  border: 1px solid gray;
+  position: relative;
+  min-width: 40px;
+  margin-top: 14px;
+  padding: 5px 10px;
+  border: 1px solid #cccccc;
   border-radius: 10px;
 }
-.memberBox {
+.own > .memberTalkMessage {
+  background: #f5ffc3;
+}
+.memberTalkMessage:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -6px;
+  left: 12px;
+  width: 10px;
+  height: 10px;
+  background: #ffffff;
+  border-top: 1px solid #cccccc;
+  border-right: 1px solid #cccccc;
+  transform: rotate(-45deg);
+}
+.own > .memberTalkMessage:before {
+  left: auto;
+  right: 12px;
+  background: #f5ffc3;
+}
+.memberChatTxt {
   position: relative;
-  height: 93%
+  height: calc(100% - 26px);
 }
 .regTxtBox {
   position: absolute;
   width: 100%;
   bottom: 0;
-  border-top: 1px solid gray;
-  background-color: white;
-  padding: 4px;
+  padding: 5px;
+  border-top: 1px solid #cccccc;
+  background-color: #ffffff;
 }
 .regTxt {
+  justify-content: space-between;
   text-align: center;
 }
 .txt {
@@ -830,13 +953,15 @@ main {
 }
 .submitBtn {
   width: 45px;
-  border: 0;
+  height: 31px;
+  background-color: #888888;
+  border-top: none;
+  border-right: none;
+  border-bottom-color: #333333;
+  border-left: none;
+  line-height: 29px;
+  color: #ffffff;
 }
-.buttonList, .buttonList > ul, .buttonList > ul > li  {
-  display: inline-block;
-}
-.buttonList {
-  position: fixed;
-  left: 300px;
-  bottom: 50px;
+.submitBtn:active {
+  height: 29px;
 }
