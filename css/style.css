@@ -703,8 +703,7 @@ a:hover {
 .btnDeleteRoomMember:active {
   height: 23px;
 }
-.addMemberBtn {
-  display: block;
+.addMember {
   text-align: right;
 }
 .fa-user-plus {
