@@ -212,8 +212,8 @@ input[type="checkbox"]:checked ~ .backgroundLayer {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 500px;
-  height: 300px;
+  width: 400px;
+  height: 250px;
   padding: 30px 50px;
   background: #ffffff;
   border: 1px solid #777777;
@@ -746,6 +746,9 @@ input[type="checkbox"]:checked ~ .actionModal {
   display: inline-block;
   width: 100px;
   height: 40px;
+  font-size: 16px;
+  line-height: 36px;
+  border-radius:4px;
 }
 .actionBtn > li > a {
   display: inline-block;
@@ -758,35 +761,44 @@ input[type="checkbox"]:checked ~ .actionModal {
 }
 .btnCancel {
   height: 38px;
-  background-color: #deda1f;
-  border-bottom-color: #737112;
-  font-size: 16px;
-  line-height: 36px;
-  border-radius:4px;
+}
+.btnCancel > a {
+  background-color: #888888;
+  border-bottom-color: #333333;
+  color: #ffffff;
 }
 .btnCancel:active {
   height: 36px;
 }
 .btnSubmit {
   height: 38px;
-  background-color: #62cc7a;
-  border-bottom-color: #737112;
-  font-size: 16px;
-  line-height: 36px;
-  border-radius:4px;
+}
+.btnSubmit > a {
+  background-color: #e8e790;
+  border-bottom-color: #908e2a;
 }
 .btnSubmit:active {
   height: 36px;
 }
 .btnOk {
   height: 38px;
-  background-color: #deda1f;
-  border-bottom-color: #737112;
-  font-size: 16px;
-  line-height: 36px;
-  border-radius:4px;
+}
+.btnOk > a {
+  background-color: #62cc7a;
+  border-bottom-color: #337141;
 }
 .btnOk:active {
+  height: 36px;
+}
+.btnDelete {
+  height: 38px;
+}
+.btnDelete > a {
+  background-color: #cc4247;
+  border-bottom-color: #792023;  
+  color: #ffffff;
+}
+.btnDelete:active {
   height: 36px;
 }
 
