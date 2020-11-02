@@ -227,6 +227,7 @@ a:hover {
 .editRoomModal {
   width: 700px;
   height: 450px;
+  text-align: left;
 }
 .buttonWrap {
   display: flex;
