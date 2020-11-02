@@ -84,14 +84,65 @@
         </div>
       </div>
     </main>
-    <div class="detail modal-syncer modal-content dn" data-target="memberList" id="memberList">
-      <p>参加者一覧</p>
+    <div class="actionModal memberModal detail modal-syncer modal-content" data-target="memberList" id="memberList">
+      <p class="modalTtl">参加者一覧</p>
+      <ul class="roomMemberList">
+        <li>
+          <i class="fas fa-crown icnCrown"></i>
+          <p class="joinedRoomMember active">$メンバー名</p>
+        </li>
+        <li>
+          <p class="joinedRoomMember active">$メンバー名</p>
+        </li>
+        <li>
+          <p class="joinedRoomMember active">$メンバー名</p>
+        </li>
+        <li>
+          <p class="joinedRoomMember active">$メンバー名</p>
+        </li>
+        <li>
+          <p class="joinedRoomMember active">$メンバー名</p>
+        </li>
+        <li>
+          <p class="joinedRoomMember active">$メンバー名</p>
+        </li>
+      </ul>
+      <div class="submitCreateRoom buttonWrap">
+        <button class="btnSubmitCreateRoom button">閉じる</button>
+      </div>
     </div>
     <div class="detail modal-syncer modal-content dn">
-      <p>参加者管理</p>
+      <p class="modalTtl">参加者管理</p>
     </div>
-    <div class="detail modal-syncer modal-content dn" data-target="invite" id="invite">
-      <p>参加者招待</p>
+    <div class="actionModal editRoomModal detail modal-syncer modal-content dn" data-target="invite" id="invite">
+      <p class="modalTtl">参加者招待</p>
+      <form action="">
+        <dl class="createRoomConditions">
+          <dt>招待メンバー</dt>
+          <dd>
+            <div class="createRoomMember">
+              <ul class="createRoomMemberList">
+                <li>名字 名前<i class="fas fa-times"></i></li>
+                <li>名字 名前<i class="fas fa-times"></i></li>
+                <li>名字 名前<i class="fas fa-times"></i></li>
+              </ul>
+            </div>
+            <p class="numberOfSelected">1 名</p>
+          </dd>
+        </dl>
+        <div class="selectAll buttonWrap">
+          <a href="javascript:void(0)" class="button">全選択</a>
+        </div>
+        <ul class="selectMemberList">
+          <li>
+            <input type="checkbox" name="selectMember" id="userId1" class="selectMemberCheck">
+            <label for="userId1" class="selectMember">名字 名前</label>
+          </li>
+        </ul>
+        <div class="submitCreateRoom buttonWrap">
+          <button class="btnSubmitCreateRoom button">追加</button>
+        </div>
+      </form>
     </div>
     <div class="detail modal-syncer modal-content dn" data-target="exit" id="exit">
       <p>ルームから退出しますか？</p>

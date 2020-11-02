@@ -965,3 +965,11 @@ main {
 .submitBtn:active {
   height: 29px;
 }
+.modalTtl {
+  font-weight: bold;
+  font-size: 18px;
+}
+.memberModal {
+  width: 400px;
+  height: 500px;
+}
