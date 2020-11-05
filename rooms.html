@@ -12,13 +12,12 @@
     <header class="header">
       <div class="headerInner">
         <div class="createRoom buttonWrap">
-          <input type="checkbox" name="createRoom" id="createRoom" class="checkCreateRoom" hidden>
-          <label for="createRoom" class="btnCreateRoom button">
+          <button for="createRoom" class="jscBtnOpenModal jscBtnCreateRoom btnCreateRoom button">
             <i class="fas fa-plus"></i>
             <span>新規ルーム作成</span>
-          </label>
-          <label for="createRoom" class="backgroundLayer dn"></label>
-          <div class="actionModal createRoomModal dn">
+          </button>
+          <div class="jscBackgroundLayer backgroundLayer dn"></div>
+          <div class="jscActionModal actionModal createRoomModal dn">
             <form action="">
               <dl class="createRoomConditions">
                 <dt>新規ルーム名</dt>
@@ -205,12 +204,11 @@
                 <i class="far fa-heart favoriteIcon"></i>
               </p>
               <div class="roomDetailWrap buttonWrap">
-                <input type="radio" name="roomDetail" class="showRoomDetail" id="roomId1" hidden>
-                <label for="roomId1" class="btnShowRoomDetail button">詳細を見る</label>
-                <div class="roomDetail">
+                <button class="jscBtnShowRoomDetail btnShowRoomDetail button">詳細を見る</button>
+                <div class="jscRoomDetail roomDetail">
                   <div class="roomDetailInner">
                     <div class="closeRoomDetail">
-                      <label for="roomId1" class="btnCloseRoomDetail">
+                      <label for="roomId1" class="jscBtnCloseRoomDetail btnCloseRoomDetail">
                         <i class="fas fa-times"></i>
                       </label>
                     </div>
@@ -221,8 +219,11 @@
                     </div>
                     <div class="editRoomNameWrap">
                       <form action="">
-                        <input type="text" name="roomName" value="$ルーム名" class="editRoomName" disabled>
-                        <button class="btnEditRoomName"><i class="fas fa-edit"></i></button>
+                        <input type="text" name="roomName" value="$ルーム名" class="jscEditRoomName editRoomName" disabled>
+                        <button class="jscBtnEditRoomName btnEditRoomName"><i class="fas fa-edit"></i></button>
+                        <div class="jscSaveRoomName saveRoomName buttonWrap dn">
+                          <p href="#" class="btnSaveRoomName button">保存</p>
+                        </div>
                       </form>
                     </div>
                     <div class="addFavoriteRoom buttonWrap">
@@ -238,17 +239,16 @@
                       <li>
                         <i class="fas fa-crown icnCrown"></i>
                         <p class="joinedRoomMember active">$メンバー名</p>
-                        <div class="deleteRoomMember buttonWrap">
-                          <input type="checkbox" name="deleteRoomMember" id="leaveMemberRoomId1" hidden>
-                          <label for="leaveMemberRoomId1" class="btnDeleteRoomMember button">退出</label>
-                          <label for="leaveMemberRoomId1" class="backgroundLayer dn"></label>
-                          <div class="actionModal dn">
+                        <div class="jscModalParent deleteRoomMember buttonWrap">
+                          <button class="jscBtnOpenModal btnDeleteRoomMember button">退出</button>
+                          <div class="jscBackgroundLayer backgroundLayer dn"></div>
+                          <div class="jscActionModal actionModal dn">
                             <p class="descriptionAction">
                               メンバーを退出させますか？
                             </p>
                             <ul class="actionBtn">
                               <li class="btnCancel buttonWrap">
-                                <a href="#" class="button">キャンセル</a>
+                                <a href="#" class="jscBtnCancel button">キャンセル</a>
                               </li>
                               <li class="btnSubmit buttonWrap">
                                 <a href="#" class="button">退出</a>
@@ -259,17 +259,16 @@
                       </li>
                       <li>
                         <p class="joinedRoomMember active">$メンバー名</p>
-                        <div class="deleteRoomMember buttonWrap">
-                          <input type="checkbox" name="deleteRoomMember" id="leaveMemberRoomId1" hidden>
-                          <label for="leaveMemberRoomId1" class="btnDeleteRoomMember button">退出</label>
-                          <label for="leaveMemberRoomId1" class="backgroundLayer dn"></label>
-                          <div class="actionModal dn">
+                        <div class="jscModalParent deleteRoomMember buttonWrap">
+                          <button class="jscBtnOpenModal btnDeleteRoomMember button">退出</button>
+                          <div class="jscBackgroundLayer backgroundLayer dn"></div>
+                          <div class="jscActionModal actionModal dn">
                             <p class="descriptionAction">
                               メンバーを退出させますか？
                             </p>
                             <ul class="actionBtn">
                               <li class="btnCancel buttonWrap">
-                                <a href="#" class="button">キャンセル</a>
+                                <a href="#" class="jscBtnCancel button">キャンセル</a>
                               </li>
                               <li class="btnSubmit buttonWrap">
                                 <a href="#" class="button">退出</a>
@@ -280,17 +279,16 @@
                       </li>
                       <li>
                         <p class="joinedRoomMember active">$メンバー名</p>
-                        <div class="deleteRoomMember buttonWrap">
-                          <input type="checkbox" name="deleteRoomMember" id="leaveMemberRoomId1" hidden>
-                          <label for="leaveMemberRoomId1" class="btnDeleteRoomMember button">退出</label>
-                          <label for="leaveMemberRoomId1" class="backgroundLayer dn"></label>
-                          <div class="actionModal dn">
+                        <div class="jscModalParent deleteRoomMember buttonWrap">
+                          <button class="jscBtnOpenModal btnDeleteRoomMember button">退出</button>
+                          <div class="jscBackgroundLayer backgroundLayer dn"></div>
+                          <div class="jscActionModal actionModal dn">
                             <p class="descriptionAction">
                               メンバーを退出させますか？
                             </p>
                             <ul class="actionBtn">
                               <li class="btnCancel buttonWrap">
-                                <a href="#" class="button">キャンセル</a>
+                                <a href="#" class="jscBtnCancel button">キャンセル</a>
                               </li>
                               <li class="btnSubmit buttonWrap">
                                 <a href="#" class="button">退出</a>
@@ -301,17 +299,16 @@
                       </li>
                       <li>
                         <p class="joinedRoomMember active">$メンバー名</p>
-                        <div class="deleteRoomMember buttonWrap">
-                          <input type="checkbox" name="deleteRoomMember" id="leaveMemberRoomId1" hidden>
-                          <label for="leaveMemberRoomId1" class="btnDeleteRoomMember button">退出</label>
-                          <label for="leaveMemberRoomId1" class="backgroundLayer dn"></label>
-                          <div class="actionModal dn">
+                        <div class="jscModalParent deleteRoomMember buttonWrap">
+                          <button class="jscBtnOpenModal btnDeleteRoomMember button">退出</button>
+                          <div class="jscBackgroundLayer backgroundLayer dn"></div>
+                          <div class="jscActionModal actionModal dn">
                             <p class="descriptionAction">
                               メンバーを退出させますか？
                             </p>
                             <ul class="actionBtn">
                               <li class="btnCancel buttonWrap">
-                                <a href="#" class="button">キャンセル</a>
+                                <a href="#" class="jscBtnCancel button">キャンセル</a>
                               </li>
                               <li class="btnSubmit buttonWrap">
                                 <a href="#" class="button">退出</a>
@@ -322,17 +319,16 @@
                       </li>
                       <li>
                         <p class="joinedRoomMember active">$メンバー名</p>
-                        <div class="deleteRoomMember buttonWrap">
-                          <input type="checkbox" name="deleteRoomMember" id="leaveMemberRoomId1" hidden>
-                          <label for="leaveMemberRoomId1" class="btnDeleteRoomMember button">退出</label>
-                          <label for="leaveMemberRoomId1" class="backgroundLayer dn"></label>
-                          <div class="actionModal dn">
+                        <div class="jscModalParent deleteRoomMember buttonWrap">
+                          <button class="jscBtnOpenModal btnDeleteRoomMember button">退出</button>
+                          <div class="jscBackgroundLayer backgroundLayer dn"></div>
+                          <div class="jscActionModal actionModal dn">
                             <p class="descriptionAction">
                               メンバーを退出させますか？
                             </p>
                             <ul class="actionBtn">
                               <li class="btnCancel buttonWrap">
-                                <a href="#" class="button">キャンセル</a>
+                                <a href="#" class="jscBtnCancel button">キャンセル</a>
                               </li>
                               <li class="btnSubmit buttonWrap">
                                 <a href="#" class="button">退出</a>
@@ -343,17 +339,16 @@
                       </li>
                       <li>
                         <p class="joinedRoomMember active">$メンバー名</p>
-                        <div class="deleteRoomMember buttonWrap">
-                          <input type="checkbox" name="deleteRoomMember" id="leaveMemberRoomId1" hidden>
-                          <label for="leaveMemberRoomId1" class="btnDeleteRoomMember button">退出</label>
-                          <label for="leaveMemberRoomId1" class="backgroundLayer dn"></label>
-                          <div class="actionModal dn">
+                        <div class="jscModalParent deleteRoomMember buttonWrap">
+                          <button class="jscBtnOpenModal btnDeleteRoomMember button">退出</button>
+                          <div class="jscBackgroundLayer backgroundLayer dn"></div>
+                          <div class="jscActionModal actionModal dn">
                             <p class="descriptionAction">
                               メンバーを退出させますか？
                             </p>
                             <ul class="actionBtn">
                               <li class="btnCancel buttonWrap">
-                                <a href="#" class="button">キャンセル</a>
+                                <a href="#" class="jscBtnCancel button">キャンセル</a>
                               </li>
                               <li class="btnSubmit buttonWrap">
                                 <a href="#" class="button">退出</a>
@@ -364,17 +359,16 @@
                       </li>
                       <li>
                         <p class="joinedRoomMember active">$メンバー名</p>
-                        <div class="deleteRoomMember buttonWrap">
-                          <input type="checkbox" name="deleteRoomMember" id="leaveMemberRoomId1" hidden>
-                          <label for="leaveMemberRoomId1" class="btnDeleteRoomMember button">退出</label>
-                          <label for="leaveMemberRoomId1" class="backgroundLayer dn"></label>
-                          <div class="actionModal dn">
+                        <div class="jscModalParent deleteRoomMember buttonWrap">
+                          <button class="jscBtnOpenModal btnDeleteRoomMember button">退出</button>
+                          <div class="jscBackgroundLayer backgroundLayer dn"></div>
+                          <div class="jscActionModal actionModal dn">
                             <p class="descriptionAction">
                               メンバーを退出させますか？
                             </p>
                             <ul class="actionBtn">
                               <li class="btnCancel buttonWrap">
-                                <a href="#" class="button">キャンセル</a>
+                                <a href="#" class="jscBtnCancel button">キャンセル</a>
                               </li>
                               <li class="btnSubmit buttonWrap">
                                 <a href="#" class="button">退出</a>
@@ -385,17 +379,16 @@
                       </li>
                       <li>
                         <p class="joinedRoomMember active">$メンバー名</p>
-                        <div class="deleteRoomMember buttonWrap">
-                          <input type="checkbox" name="deleteRoomMember" id="leaveMemberRoomId1" hidden>
-                          <label for="leaveMemberRoomId1" class="btnDeleteRoomMember button">退出</label>
-                          <label for="leaveMemberRoomId1" class="backgroundLayer dn"></label>
-                          <div class="actionModal dn">
+                        <div class="jscModalParent deleteRoomMember buttonWrap">
+                          <button class="jscBtnOpenModal btnDeleteRoomMember button">退出</button>
+                          <div class="jscBackgroundLayer backgroundLayer dn"></div>
+                          <div class="jscActionModal actionModal dn">
                             <p class="descriptionAction">
                               メンバーを退出させますか？
                             </p>
                             <ul class="actionBtn">
                               <li class="btnCancel buttonWrap">
-                                <a href="#" class="button">キャンセル</a>
+                                <a href="#" class="jscBtnCancel button">キャンセル</a>
                               </li>
                               <li class="btnSubmit buttonWrap">
                                 <a href="#" class="button">退出</a>
@@ -406,17 +399,16 @@
                       </li>
                       <li>
                         <p class="joinedRoomMember active">$メンバー名</p>
-                        <div class="deleteRoomMember buttonWrap">
-                          <input type="checkbox" name="deleteRoomMember" id="leaveMemberRoomId1" hidden>
-                          <label for="leaveMemberRoomId1" class="btnDeleteRoomMember button">退出</label>
-                          <label for="leaveMemberRoomId1" class="backgroundLayer dn"></label>
+                        <div class="jscModalParent deleteRoomMember buttonWrap">
+                          <label class="btnDeleteRoomMember button">退出</label>
+                          <label class="backgroundLayer dn"></label>
                           <div class="actionModal dn">
                             <p class="descriptionAction">
                               メンバーを退出させますか？
                             </p>
                             <ul class="actionBtn">
                               <li class="btnCancel buttonWrap">
-                                <a href="#" class="button">キャンセル</a>
+                                <a href="#" class="jscBtnCancel button">キャンセル</a>
                               </li>
                               <li class="btnSubmit buttonWrap">
                                 <a href="#" class="button">退出</a>
@@ -427,17 +419,16 @@
                       </li>
                       <li>
                         <p class="joinedRoomMember active">$メンバー名</p>
-                        <div class="deleteRoomMember buttonWrap">
-                          <input type="checkbox" name="deleteRoomMember" id="leaveMemberRoomId1" hidden>
-                          <label for="leaveMemberRoomId1" class="btnDeleteRoomMember button">退出</label>
-                          <label for="leaveMemberRoomId1" class="backgroundLayer dn"></label>
-                          <div class="actionModal dn">
+                        <div class="jscModalParent deleteRoomMember buttonWrap">
+                          <button class="jscBtnOpenModal btnDeleteRoomMember button">退出</button>
+                          <div class="jscBackgroundLayer backgroundLayer dn"></div>
+                          <div class="jscActionModal actionModal dn">
                             <p class="descriptionAction">
                               メンバーを退出させますか？
                             </p>
                             <ul class="actionBtn">
                               <li class="btnCancel buttonWrap">
-                                <a href="#" class="button">キャンセル</a>
+                                <a href="#" class="jscBtnCancel button">キャンセル</a>
                               </li>
                               <li class="btnSubmit buttonWrap">
                                 <a href="#" class="button">退出</a>
@@ -448,17 +439,16 @@
                       </li>
                       <li>
                         <p class="joinedRoomMember active">$メンバー名</p>
-                        <div class="deleteRoomMember buttonWrap">
-                          <input type="checkbox" name="deleteRoomMember" id="leaveMemberRoomId1" hidden>
-                          <label for="leaveMemberRoomId1" class="btnDeleteRoomMember button">退出</label>
-                          <label for="leaveMemberRoomId1" class="backgroundLayer dn"></label>
-                          <div class="actionModal dn">
+                        <div class="jscModalParent deleteRoomMember buttonWrap">
+                          <button class="jscBtnOpenModal btnDeleteRoomMember button">退出</button>
+                          <div class="jscBackgroundLayer backgroundLayer dn"></div>
+                          <div class="jscActionModal actionModal dn">
                             <p class="descriptionAction">
                               メンバーを退出させますか？
                             </p>
                             <ul class="actionBtn">
                               <li class="btnCancel buttonWrap">
-                                <a href="#" class="button">キャンセル</a>
+                                <a href="#" class="jscBtnCancel button">キャンセル</a>
                               </li>
                               <li class="btnSubmit buttonWrap">
                                 <a href="#" class="button">退出</a>
@@ -469,12 +459,11 @@
                       </li>
                     </ul>
                     <div class="addMember">
-                      <input type="checkbox" name="createRoom" id="addMember" class="checkCreateRoom" hidden>
-                      <label for="addMember" class="addMemberBtn">
+                      <button class="jscBtnOpenModal">
                         <i class="fas fa-user-plus"></i>
-                      </label>
-                      <label for="addMember" class="backgroundLayer dn"></label>
-                      <div class="actionModal editRoomModal dn">
+                      </button>
+                      <div for="addMember" class="jscBackgroundLayer backgroundLayer dn"></div>
+                      <div class="jscActionModal actionModal editRoomModal dn">
                         <form action="">
                           <dl class="createRoomConditions">
                             <dt>招待メンバー</dt>
@@ -625,17 +614,16 @@
                       </div>
                     </div>
                     <ul class="actionBtnList">
-                      <li class="startChat buttonWrap">
-                        <input type="checkbox" name="startChat" id="startChatRoomId1" hidden>
-                        <label for="startChatRoomId1" class="btnStartChat button">通話</label>
-                        <label for="startChatRoomId1" class="backgroundLayer dn"></label>
-                        <div class="actionModal dn">
+                      <li class="jscModalParent startChat buttonWrap">
+                        <button for="startChatRoomId1" class="jscBtnOpenModal btnStartChat button">通話</button>
+                        <div for="startChatRoomId1" class="jscBackgroundLayer backgroundLayer dn"></div>
+                        <div class="jscActionModal actionModal dn">
                           <p class="descriptionAction">
                             ミーティングを開始しますか？
                           </p>
                           <ul class="actionBtn">
                             <li class="btnCancel buttonWrap">
-                              <a href="#" class="button">キャンセル</a>
+                              <a href="#" class="jscBtnCancel button">キャンセル</a>
                             </li>
                             <li class="btnOk buttonWrap">
                               <a href="#" class="button">OK</a>
@@ -643,18 +631,17 @@
                           </ul>
                         </div>
                       </li>
-                      <li class="deleteChatRoom buttonWrap">
-                        <input type="checkbox" name="deleteChatRoom" id="deleteRoomId1" hidden>
-                        <label for="deleteRoomId1" class="btnDeleteChatRoom button">削除</label>
-                        <label for="deleteRoomId1" class="backgroundLayer dn"></label>
-                          <div class="actionModal dn">
+                      <li class="jscModalParent deleteChatRoom buttonWrap">
+                        <button for="deleteRoomId1" class="jscBtnOpenModal btnDeleteChatRoom button">削除</button>
+                        <div for="deleteRoomId1" class="jscBackgroundLayer backgroundLayer dn"></div>
+                          <div class="jscActionModal actionModal dn">
                             <p class="descriptionAction">
                               一度削除したルームは元に戻せません。<br>
                               ルームを削除しますか？
                             </p>
                             <ul class="actionBtn">
                               <li class="btnCancel buttonWrap">
-                                <a href="#" class="button">キャンセル</a>
+                                <a href="#" class="jscBtnCancel button">キャンセル</a>
                               </li>
                               <li class="btnDelete buttonWrap">
                                 <a href="#" class="button">削除</a>
@@ -662,18 +649,17 @@
                             </ul>
                           </div>
                       </li>
-                      <li class="leaveChatRoom buttonWrap">
-                        <input type="checkbox" name="leaveChatRoom" id="leaveRoomId1" hidden>
-                        <label for="leaveRoomId1" class="btnLeaveChatRoom button">退出</label>
-                        <label for="leaveRoomId1" class="backgroundLayer dn"></label>
-                        <div class="actionModal dn">
+                      <li class="jscModalParent leaveChatRoom buttonWrap">
+                        <label class="jscBtnOpenModal btnLeaveChatRoom button">退出</label>
+                        <label class="jscBackgroundLayer backgroundLayer dn"></label>
+                        <div class="jscActionModal actionModal dn">
                           <p class="descriptionAction">
                             <span>あなたはこのルームの管理者になっています。<br></span>
                             ルームを退出しますか？
                           </p>
                           <ul class="actionBtn">
                             <li class="btnCancel buttonWrap">
-                              <a href="#" class="button">キャンセル</a>
+                              <a href="#" class="jscBtnCancel button">キャンセル</a>
                             </li>
                             <li class="btnSubmit buttonWrap">
                               <a href="#" class="button">退出</a>
@@ -693,8 +679,472 @@
                 <i class="far fa-heart favoriteIcon dn"></i>
               </p>
               <div class="roomDetailWrap buttonWrap">
-                <input type="radio" name="roomDetail" class="showRoomDetail" id="roomId2" hidden>
-                <label for="roomId2" class="btnShowRoomDetail button">詳細を見る</label>
+                <button class="jscBtnShowRoomDetail btnShowRoomDetail button">詳細を見る</button>
+                <div class="jscRoomDetail roomDetail">
+                  <div class="roomDetailInner">
+                    <div class="closeRoomDetail">
+                      <label for="roomId1" class="jscBtnCloseRoomDetail btnCloseRoomDetail">
+                        <i class="fas fa-times"></i>
+                      </label>
+                    </div>
+                    <div class="roomImg" style="background-image: url('/images/room_img_1.jpg');">
+                      <button class="btnEditRoomImg">
+                        <i class="fas fa-images icnEditRoomImg"></i>
+                      </button>
+                    </div>
+                    <div class="editRoomNameWrap">
+                      <form action="">
+                        <input type="text" name="roomName" value="$ルーム名" class="jscEditRoomName editRoomName" disabled>
+                        <button class="jscBtnEditRoomName btnEditRoomName"><i class="fas fa-edit"></i></button>
+                        <div class="jscSaveRoomName saveRoomName buttonWrap dn">
+                          <p href="#" class="btnSaveRoomName button">保存</p>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="addFavoriteRoom buttonWrap">
+                      <form action="">
+                        <button class="btnFavoriteRoom button addedFavorite">
+                          お気に入り
+                          <i class="fas fa-heart favoriteIcon dn"></i>
+                          <i class="far fa-heart favoriteIcon"></i>
+                        </button>
+                      </form>
+                    </div>
+                    <ul class="roomMemberList">
+                      <li>
+                        <i class="fas fa-crown icnCrown"></i>
+                        <p class="joinedRoomMember active">$メンバー名</p>
+                        <div class="jscModalParent deleteRoomMember buttonWrap">
+                          <button class="jscBtnOpenModal btnDeleteRoomMember button">退出</button>
+                          <div class="jscBackgroundLayer backgroundLayer dn"></div>
+                          <div class="jscActionModal actionModal dn">
+                            <p class="descriptionAction">
+                              メンバーを退出させますか？
+                            </p>
+                            <ul class="actionBtn">
+                              <li class="btnCancel buttonWrap">
+                                <a href="#" class="jscBtnCancel button">キャンセル</a>
+                              </li>
+                              <li class="btnSubmit buttonWrap">
+                                <a href="#" class="button">退出</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <p class="joinedRoomMember active">$メンバー名</p>
+                        <div class="jscModalParent deleteRoomMember buttonWrap">
+                          <button class="jscBtnOpenModal btnDeleteRoomMember button">退出</button>
+                          <div class="jscBackgroundLayer backgroundLayer dn"></div>
+                          <div class="jscActionModal actionModal dn">
+                            <p class="descriptionAction">
+                              メンバーを退出させますか？
+                            </p>
+                            <ul class="actionBtn">
+                              <li class="btnCancel buttonWrap">
+                                <a href="#" class="jscBtnCancel button">キャンセル</a>
+                              </li>
+                              <li class="btnSubmit buttonWrap">
+                                <a href="#" class="button">退出</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <p class="joinedRoomMember active">$メンバー名</p>
+                        <div class="jscModalParent deleteRoomMember buttonWrap">
+                          <button class="jscBtnOpenModal btnDeleteRoomMember button">退出</button>
+                          <div class="jscBackgroundLayer backgroundLayer dn"></div>
+                          <div class="jscActionModal actionModal dn">
+                            <p class="descriptionAction">
+                              メンバーを退出させますか？
+                            </p>
+                            <ul class="actionBtn">
+                              <li class="btnCancel buttonWrap">
+                                <a href="#" class="jscBtnCancel button">キャンセル</a>
+                              </li>
+                              <li class="btnSubmit buttonWrap">
+                                <a href="#" class="button">退出</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <p class="joinedRoomMember active">$メンバー名</p>
+                        <div class="jscModalParent deleteRoomMember buttonWrap">
+                          <button class="jscBtnOpenModal btnDeleteRoomMember button">退出</button>
+                          <div class="jscBackgroundLayer backgroundLayer dn"></div>
+                          <div class="jscActionModal actionModal dn">
+                            <p class="descriptionAction">
+                              メンバーを退出させますか？
+                            </p>
+                            <ul class="actionBtn">
+                              <li class="btnCancel buttonWrap">
+                                <a href="#" class="jscBtnCancel button">キャンセル</a>
+                              </li>
+                              <li class="btnSubmit buttonWrap">
+                                <a href="#" class="button">退出</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <p class="joinedRoomMember active">$メンバー名</p>
+                        <div class="jscModalParent deleteRoomMember buttonWrap">
+                          <button class="jscBtnOpenModal btnDeleteRoomMember button">退出</button>
+                          <div class="jscBackgroundLayer backgroundLayer dn"></div>
+                          <div class="jscActionModal actionModal dn">
+                            <p class="descriptionAction">
+                              メンバーを退出させますか？
+                            </p>
+                            <ul class="actionBtn">
+                              <li class="btnCancel buttonWrap">
+                                <a href="#" class="jscBtnCancel button">キャンセル</a>
+                              </li>
+                              <li class="btnSubmit buttonWrap">
+                                <a href="#" class="button">退出</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <p class="joinedRoomMember active">$メンバー名</p>
+                        <div class="jscModalParent deleteRoomMember buttonWrap">
+                          <button class="jscBtnOpenModal btnDeleteRoomMember button">退出</button>
+                          <div class="jscBackgroundLayer backgroundLayer dn"></div>
+                          <div class="jscActionModal actionModal dn">
+                            <p class="descriptionAction">
+                              メンバーを退出させますか？
+                            </p>
+                            <ul class="actionBtn">
+                              <li class="btnCancel buttonWrap">
+                                <a href="#" class="jscBtnCancel button">キャンセル</a>
+                              </li>
+                              <li class="btnSubmit buttonWrap">
+                                <a href="#" class="button">退出</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <p class="joinedRoomMember active">$メンバー名</p>
+                        <div class="jscModalParent deleteRoomMember buttonWrap">
+                          <button class="jscBtnOpenModal btnDeleteRoomMember button">退出</button>
+                          <div class="jscBackgroundLayer backgroundLayer dn"></div>
+                          <div class="jscActionModal actionModal dn">
+                            <p class="descriptionAction">
+                              メンバーを退出させますか？
+                            </p>
+                            <ul class="actionBtn">
+                              <li class="btnCancel buttonWrap">
+                                <a href="#" class="jscBtnCancel button">キャンセル</a>
+                              </li>
+                              <li class="btnSubmit buttonWrap">
+                                <a href="#" class="button">退出</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <p class="joinedRoomMember active">$メンバー名</p>
+                        <div class="jscModalParent deleteRoomMember buttonWrap">
+                          <button class="jscBtnOpenModal btnDeleteRoomMember button">退出</button>
+                          <div class="jscBackgroundLayer backgroundLayer dn"></div>
+                          <div class="jscActionModal actionModal dn">
+                            <p class="descriptionAction">
+                              メンバーを退出させますか？
+                            </p>
+                            <ul class="actionBtn">
+                              <li class="btnCancel buttonWrap">
+                                <a href="#" class="jscBtnCancel button">キャンセル</a>
+                              </li>
+                              <li class="btnSubmit buttonWrap">
+                                <a href="#" class="button">退出</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <p class="joinedRoomMember active">$メンバー名</p>
+                        <div class="jscModalParent deleteRoomMember buttonWrap">
+                          <label class="btnDeleteRoomMember button">退出</label>
+                          <label class="backgroundLayer dn"></label>
+                          <div class="actionModal dn">
+                            <p class="descriptionAction">
+                              メンバーを退出させますか？
+                            </p>
+                            <ul class="actionBtn">
+                              <li class="btnCancel buttonWrap">
+                                <a href="#" class="jscBtnCancel button">キャンセル</a>
+                              </li>
+                              <li class="btnSubmit buttonWrap">
+                                <a href="#" class="button">退出</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <p class="joinedRoomMember active">$メンバー名</p>
+                        <div class="jscModalParent deleteRoomMember buttonWrap">
+                          <button class="jscBtnOpenModal btnDeleteRoomMember button">退出</button>
+                          <div class="jscBackgroundLayer backgroundLayer dn"></div>
+                          <div class="jscActionModal actionModal dn">
+                            <p class="descriptionAction">
+                              メンバーを退出させますか？
+                            </p>
+                            <ul class="actionBtn">
+                              <li class="btnCancel buttonWrap">
+                                <a href="#" class="jscBtnCancel button">キャンセル</a>
+                              </li>
+                              <li class="btnSubmit buttonWrap">
+                                <a href="#" class="button">退出</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <p class="joinedRoomMember active">$メンバー名</p>
+                        <div class="jscModalParent deleteRoomMember buttonWrap">
+                          <button class="jscBtnOpenModal btnDeleteRoomMember button">退出</button>
+                          <div class="jscBackgroundLayer backgroundLayer dn"></div>
+                          <div class="jscActionModal actionModal dn">
+                            <p class="descriptionAction">
+                              メンバーを退出させますか？
+                            </p>
+                            <ul class="actionBtn">
+                              <li class="btnCancel buttonWrap">
+                                <a href="#" class="jscBtnCancel button">キャンセル</a>
+                              </li>
+                              <li class="btnSubmit buttonWrap">
+                                <a href="#" class="button">退出</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                    <div class="addMember">
+                      <button class="jscBtnOpenModal">
+                        <i class="fas fa-user-plus"></i>
+                      </button>
+                      <div for="addMember" class="jscBackgroundLayer backgroundLayer dn"></div>
+                      <div class="jscActionModal actionModal editRoomModal dn">
+                        <form action="">
+                          <dl class="createRoomConditions">
+                            <dt>招待メンバー</dt>
+                            <dd>
+                              <div class="createRoomMember">
+                                <ul class="createRoomMemberList">
+                                  <li>名字 名前<i class="fas fa-times"></i></li>
+                                  <li>名字 名前<i class="fas fa-times"></i></li>
+                                  <li>名字 名前<i class="fas fa-times"></i></li>
+                                </ul>
+                              </div>
+                              <p class="numberOfSelected">1 名</p>
+                            </dd>
+                          </dl>
+                          <div class="selectAll buttonWrap">
+                            <a href="javascript:void(0)" class="button">全選択</a>
+                          </div>
+                          <ul class="selectMemberList">
+                            <li>
+                              <input type="checkbox" name="selectMember" id="userId1" class="selectMemberCheck">
+                              <label for="userId1" class="selectMember">名字 名前</label>
+                            </li>
+                            <li>
+                              <input type="checkbox" name="selectMember" id="userId2" class="selectMemberCheck">
+                              <label for="userId2" class="selectMember">名字 名前</label>
+                            </li>
+                            <li>
+                              <input type="checkbox" name="selectMember" id="userId3" class="selectMemberCheck">
+                              <label for="userId3" class="selectMember">名字 名前</label>
+                            </li>
+                            <li>
+                              <input type="checkbox" name="selectMember" id="userId4" class="selectMemberCheck">
+                              <label for="userId4" class="selectMember">名字 名前</label>
+                            </li>
+                            <li>
+                              <input type="checkbox" name="selectMember" id="userId5" class="selectMemberCheck">
+                              <label for="userId5" class="selectMember">名字 名前</label>
+                            </li>
+                            <li>
+                              <input type="checkbox" name="selectMember" id="userId6" class="selectMemberCheck">
+                              <label for="userId6" class="selectMember">名字 名前</label>
+                            </li>
+                            <li>
+                              <input type="checkbox" name="selectMember" id="userId7" class="selectMemberCheck">
+                              <label for="userId7" class="selectMember">名字 名前</label>
+                            </li>
+                            <li>
+                              <input type="checkbox" name="selectMember" id="userId8" class="selectMemberCheck">
+                              <label for="userId8" class="selectMember">名字 名前</label>
+                            </li>
+                            <li>
+                              <input type="checkbox" name="selectMember" id="userId9" class="selectMemberCheck">
+                              <label for="userId9" class="selectMember">名字 名前</label>
+                            </li>
+                            <li>
+                              <input type="checkbox" name="selectMember" id="userId10" class="selectMemberCheck">
+                              <label for="userId10" class="selectMember">名字 名前</label>
+                            </li>
+                            <li>
+                              <input type="checkbox" name="selectMember" id="userId11" class="selectMemberCheck">
+                              <label for="userId11" class="selectMember">名字 名前</label>
+                            </li>
+                            <li>
+                              <input type="checkbox" name="selectMember" id="userId12" class="selectMemberCheck">
+                              <label for="userId12" class="selectMember">名字 名前</label>
+                            </li>
+                            <li>
+                              <input type="checkbox" name="selectMember" id="userId13" class="selectMemberCheck">
+                              <label for="userId13" class="selectMember">名字 名前</label>
+                            </li>
+                            <li>
+                              <input type="checkbox" name="selectMember" id="userId14" class="selectMemberCheck">
+                              <label for="userId14" class="selectMember">名字 名前</label>
+                            </li>
+                            <li>
+                              <input type="checkbox" name="selectMember" id="userId15" class="selectMemberCheck">
+                              <label for="userId15" class="selectMember">名字 名前</label>
+                            </li>
+                            <li>
+                              <input type="checkbox" name="selectMember" id="userId16" class="selectMemberCheck">
+                              <label for="userId16" class="selectMember">名字 名前</label>
+                            </li>
+                            <li>
+                              <input type="checkbox" name="selectMember" id="userId17" class="selectMemberCheck">
+                              <label for="userId17" class="selectMember">名字 名前</label>
+                            </li>
+                            <li>
+                              <input type="checkbox" name="selectMember" id="userId18" class="selectMemberCheck">
+                              <label for="userId18" class="selectMember">名字 名前</label>
+                            </li>
+                            <li>
+                              <input type="checkbox" name="selectMember" id="userId19" class="selectMemberCheck">
+                              <label for="userId19" class="selectMember">名字 名前</label>
+                            </li>
+                            <li>
+                              <input type="checkbox" name="selectMember" id="userId20" class="selectMemberCheck">
+                              <label for="userId20" class="selectMember">名字 名前</label>
+                            </li>
+                            <li>
+                              <input type="checkbox" name="selectMember" id="userId21" class="selectMemberCheck">
+                              <label for="userId21" class="selectMember">名字 名前</label>
+                            </li>
+                            <li>
+                              <input type="checkbox" name="selectMember" id="userId22" class="selectMemberCheck">
+                              <label for="userId22" class="selectMember">名字 名前</label>
+                            </li>
+                            <li>
+                              <input type="checkbox" name="selectMember" id="userId23" class="selectMemberCheck">
+                              <label for="userId23" class="selectMember">名字 名前</label>
+                            </li>
+                            <li>
+                              <input type="checkbox" name="selectMember" id="userId24" class="selectMemberCheck">
+                              <label for="userId24" class="selectMember">名字 名前</label>
+                            </li>
+                            <li>
+                              <input type="checkbox" name="selectMember" id="userId25" class="selectMemberCheck">
+                              <label for="userId25" class="selectMember">名字 名前</label>
+                            </li>
+                            <li>
+                              <input type="checkbox" name="selectMember" id="userId26" class="selectMemberCheck">
+                              <label for="userId26" class="selectMember">名字 名前</label>
+                            </li>
+                            <li>
+                              <input type="checkbox" name="selectMember" id="userId27" class="selectMemberCheck">
+                              <label for="userId27" class="selectMember">名字 名前</label>
+                            </li>
+                            <li>
+                              <input type="checkbox" name="selectMember" id="userId28" class="selectMemberCheck">
+                              <label for="userId28" class="selectMember">名字 名前</label>
+                            </li>
+                            <li>
+                              <input type="checkbox" name="selectMember" id="userId29" class="selectMemberCheck">
+                              <label for="userId29" class="selectMember">名字 名前</label>
+                            </li>
+                            <li>
+                              <input type="checkbox" name="selectMember" id="userId30" class="selectMemberCheck">
+                              <label for="userId30" class="selectMember">名字 名前</label>
+                            </li>
+                            <li>
+                              <input type="checkbox" name="selectMember" id="userId31" class="selectMemberCheck">
+                              <label for="userId31" class="selectMember">名字 名前</label>
+                            </li>
+                          </ul>
+                          <div class="submitCreateRoom buttonWrap">
+                            <button class="btnSubmitCreateRoom button">招待</button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                    <ul class="actionBtnList">
+                      <li class="jscModalParent startChat buttonWrap">
+                        <button for="startChatRoomId1" class="jscBtnOpenModal btnStartChat button">通話</button>
+                        <div for="startChatRoomId1" class="jscBackgroundLayer backgroundLayer dn"></div>
+                        <div class="jscActionModal actionModal dn">
+                          <p class="descriptionAction">
+                            ミーティングを開始しますか？
+                          </p>
+                          <ul class="actionBtn">
+                            <li class="btnCancel buttonWrap">
+                              <a href="#" class="jscBtnCancel button">キャンセル</a>
+                            </li>
+                            <li class="btnOk buttonWrap">
+                              <a href="#" class="button">OK</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="jscModalParent deleteChatRoom buttonWrap">
+                        <button for="deleteRoomId1" class="jscBtnOpenModal btnDeleteChatRoom button">削除</button>
+                        <div for="deleteRoomId1" class="jscBackgroundLayer backgroundLayer dn"></div>
+                          <div class="jscActionModal actionModal dn">
+                            <p class="descriptionAction">
+                              一度削除したルームは元に戻せません。<br>
+                              ルームを削除しますか？
+                            </p>
+                            <ul class="actionBtn">
+                              <li class="btnCancel buttonWrap">
+                                <a href="#" class="jscBtnCancel button">キャンセル</a>
+                              </li>
+                              <li class="btnDelete buttonWrap">
+                                <a href="#" class="button">削除</a>
+                              </li>
+                            </ul>
+                          </div>
+                      </li>
+                      <li class="jscModalParent leaveChatRoom buttonWrap">
+                        <label class="jscBtnOpenModal btnLeaveChatRoom button">退出</label>
+                        <label class="jscBackgroundLayer backgroundLayer dn"></label>
+                        <div class="jscActionModal actionModal dn">
+                          <p class="descriptionAction">
+                            <span>あなたはこのルームの管理者になっています。<br></span>
+                            ルームを退出しますか？
+                          </p>
+                          <ul class="actionBtn">
+                            <li class="btnCancel buttonWrap">
+                              <a href="#" class="jscBtnCancel button">キャンセル</a>
+                            </li>
+                            <li class="btnSubmit buttonWrap">
+                              <a href="#" class="button">退出</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </li>
             <li>

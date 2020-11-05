@@ -193,21 +193,20 @@ a:hover {
   display: none !important;
 }
 .backgroundLayer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+  height: auto;
   background: rgba(0, 0, 0, 0.7);
   z-index: 100;
 }
-input[type="checkbox"]:checked ~ .backgroundLayer {
-  display: flex !important;
-  align-items: center;
-  justify-content: center;
-  height: auto;
-}
 .actionModal {
+  display: block;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -228,9 +227,6 @@ input[type="checkbox"]:checked ~ .backgroundLayer {
 .editRoomModal {
   width: 700px;
   height: 450px;
-}
-input[type="checkbox"]:checked ~ .actionModal {
-  display: block !important;
 }
 .buttonWrap {
   display: flex;
@@ -279,6 +275,7 @@ input[type="checkbox"]:checked ~ .actionModal {
   border-bottom-color: #48536b;
   font-size: 16px;
   line-height: 36px;
+  color: #ffffff;
 }
 .btnCreateRoom:active {
   height: 36px;
@@ -536,13 +533,13 @@ input[type="checkbox"]:checked ~ .actionModal {
   z-index: 50;
   transition: all 0.5s;
 }
+.roomDetail.open {
+  right: 0;
+}
 .roomDetailInner {
   position: relative;
   height: 100%;
   padding-bottom: 70px;
-}
-.showRoomDetail:checked ~ .roomDetail {
-  right: 0;
 }
 .closeRoomDetail {
   height: 26px;
@@ -552,6 +549,7 @@ input[type="checkbox"]:checked ~ .actionModal {
   padding: 5px 7px;
   border: 1px solid #888888;
   border-radius: 4px;
+  cursor: pointer;
 }
 .roomDetailInner > .roomImg,
 .editRoomNameWrap,
@@ -578,7 +576,7 @@ input[type="checkbox"]:checked ~ .actionModal {
 }
 .editRoomNameWrap {
   position: relative;
-  padding-right: 30px;
+  padding-right: 50px;
 }
 .editRoomName {
   width: 100%;
@@ -595,6 +593,27 @@ input[type="checkbox"]:checked ~ .actionModal {
   top: 50%;
   right: 0;
   transform: translateY(-50%);
+  width: 100%;
+  background: none;
+  text-align: right;
+  cursor: pointer;
+}
+.saveRoomName {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  height: 25px;
+}
+.btnSaveRoomName {
+  width: 40px;
+  height: 25px;
+  background: #62cc7a;
+  border-bottom-color: #337141;
+}
+.btnSaveRoomName:active {
+  top: 50%;
+  height: 23px;
 }
 .addFavoriteRoom {
   position: relative;
@@ -684,8 +703,7 @@ input[type="checkbox"]:checked ~ .actionModal {
 .btnDeleteRoomMember:active {
   height: 23px;
 }
-.addMemberBtn {
-  display: block;
+.addMember {
   text-align: right;
 }
 .fa-user-plus {
