@@ -758,10 +758,11 @@ a:hover {
 
 
 .actionBtn {
+  display: flex;
+  justify-content: center;
   text-align: center;
 }
 .actionBtn > li {
-  display: inline-block;
   width: 100px;
   height: 40px;
   font-size: 16px;
@@ -769,18 +770,19 @@ a:hover {
   border-radius:4px;
 }
 .actionBtn > li > a {
-  display: inline-block;
   width: 100px;
   height: 40px;
+  transition: none;
+}
+.actionBtn > li + li {
+  margin-left: 10px;
 }
 .descriptionAction {
-  text-align: center;
   height: 100px;
+  text-align: center;
 }
 .btnCancel {
   height: 38px;
-}
-.btnCancel > a {
   background-color: #888888;
   border-bottom-color: #333333;
   color: #ffffff;
@@ -790,8 +792,6 @@ a:hover {
 }
 .btnSubmit {
   height: 38px;
-}
-.btnSubmit > a {
   background-color: #e8e790;
   border-bottom-color: #908e2a;
 }
@@ -800,8 +800,6 @@ a:hover {
 }
 .btnOk {
   height: 38px;
-}
-.btnOk > a {
   background-color: #62cc7a;
   border-bottom-color: #337141;
 }
@@ -810,8 +808,6 @@ a:hover {
 }
 .btnDelete {
   height: 38px;
-}
-.btnDelete > a {
   background-color: #cc4247;
   border-bottom-color: #792023;  
   color: #ffffff;
