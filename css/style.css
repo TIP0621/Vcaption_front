@@ -772,7 +772,7 @@ a:hover {
 }
 .actionBtn > li > a {
   width: 100px;
-  height: 40px;
+  height: 38px;
   transition: none;
 }
 .actionBtn > li + li {
@@ -788,31 +788,22 @@ a:hover {
   border-bottom-color: #333333;
   color: #ffffff;
 }
-.btnCancel:active {
-  height: 36px;
-}
 .btnSubmit {
-  height: 38px;
   background-color: #e8e790;
   border-bottom-color: #908e2a;
 }
-.btnSubmit:active {
-  height: 36px;
-}
 .btnOk {
-  height: 38px;
   background-color: #62cc7a;
   border-bottom-color: #337141;
 }
-.btnOk:active {
-  height: 36px;
-}
 .btnDelete {
-  height: 38px;
   background-color: #cc4247;
   border-bottom-color: #792023;
   color: #ffffff;
 }
+.btnCancel:active,
+.btnSubmit:active,
+.btnOk:active,
 .btnDelete:active {
   height: 36px;
 }
@@ -1012,45 +1003,3 @@ button.chatActionModalIcn {
 .submitBtn:active {
   height: 29px;
 }
-.modalTtl {
-  font-weight: bold;
-  font-size: 18px;
-}
-.memberModal {
-  width: 400px;
-  height: 500px;
-}
-
-.chatRoomMemberList {
-  margin-top: 20px;
-  height: calc(100vh - 648px);
-  overflow: auto;
-}
-.chatRoomMemberList > li {
-  display: flex;
-  position: relative;
-  padding-right: 50px;
-  padding-left: 38px;
-}
-.chatRoomMemberList > li + li {
-  margin-top: 10px;
-}
-.muteOnOff {
-  position: absolute;
-  right: 16px;
-  width: 18px;
-  font-size: 24px;
-  color: #000;
-}
-.micBtnList > li + li {
-  margin: 0 15px;
-}
-.muteMic {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-radius: 4px;
-  text-align: center;
-  cursor: pointer;
-  background-color: #fbd09d;
-}
-
