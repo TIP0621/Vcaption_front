@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>チャットルーム / Vcaption</title>
   <link rel="stylesheet" href="/css/style.css">
+  <script type="text/javascript" src="/js/common.js"></script>
   <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 </head>
 <body>
@@ -19,19 +20,258 @@
         </ul>
         <ul class="chatActionBtn">
           <li>
-            <i class="fas fa-video"></i>
+            <a class="jscBtnOpenModal" href="javascript:void(0)">
+              <i class="fas fa-video"></i>
+            </a>
           </li>
           <li>
-            <i class="fas fa-microphone"></i>
+            <a class="jscBtnOpenModal" href="javascript:void(0)">
+              <i class="fas fa-microphone"></i>
+            </a>
           </li>
-          <li class="modalClassSyncer memberList" onclick="openModal('memberList');">
-            <i class="fas fa-users"></i>
+          <li>
+            <a class="jscBtnOpenModal" href="javascript:void(0)">
+              <i class="fas fa-users"></i>
+            </a>
+            <div class="jscActionModal actionModal memberModal detail dn">
+              <p class="modalTtl">参加者一覧</p>
+              <ul class="chatRoomMemberList">
+                <li>
+                  <i class="fas fa-crown icnCrown"></i>
+                  <p class="joinedRoomMember active">$メンバー名</p>
+                </li>
+                <li>
+                  <p class="joinedRoomMember active">$メンバー名</p>
+                </li>
+                <li>
+                  <p class="joinedRoomMember active">$メンバー名</p>
+                </li>
+                <li>
+                  <p class="joinedRoomMember active">$メンバー名</p>
+                </li>
+                <li>
+                  <p class="joinedRoomMember active">$メンバー名</p>
+                </li>
+                <li>
+                  <p class="joinedRoomMember active">$メンバー名</p>
+                </li>
+              </ul>
+              <div class="submitCreateRoom buttonWrap">
+                <button class="btnSubmitCreateRoom button">閉じる</button>
+              </div>
+            </div>
+            <div class="jscActionModal actionModal memberModal detail dn">
+              <p class="modalTtl">参加者管理</p>
+              <ul class="chatRoomMemberList">
+                <li>
+                  <i class="fas fa-crown icnCrown"></i>
+                  <p class="joinedRoomMember active">$メンバー名</p>
+                  <i class="fas fa-microphone muteOnOff"></i>
+                </li>
+                <li>
+                  <p class="joinedRoomMember active">$メンバー名</p>
+                  <i class="fas fa-microphone muteOnOff"></i>
+                </li>
+                <li>
+                  <p class="joinedRoomMember active">$メンバー名</p>
+                  <i class="fas fa-microphone muteOnOff"></i>
+                </li>
+                <li>
+                  <p class="joinedRoomMember active">$メンバー名</p>
+                  <i class="fas fa-microphone muteOnOff"></i>
+                </li>
+                <li>
+                  <p class="joinedRoomMember active">$メンバー名</p>
+                  <i class="fas fa-microphone muteOnOff"></i>
+                </li>
+                <li>
+                  <p class="joinedRoomMember active">$メンバー名</p>
+                  <i class="fas fa-microphone muteOnOff"></i>
+                </li>
+              </ul>
+              <ul class="actionBtn micBtnList">
+                <li class="buttonWrap">
+                  <a href="#" class="button muteMic">全マイクOFF</a>
+                </li>
+                <li class="buttonWrap">
+                  <a href="#" class="button muteMic">全マイクON</a>
+                </li>
+              </ul>
+              <div class="submitCreateRoom buttonWrap">
+                <button class="btnSubmitCreateRoom button">閉じる</button>
+              </div>
+            </div>
           </li>
-          <li class="modalClassSyncer invite" onclick="openModal('invite');">
-            <i class="fas fa-user-plus"></i>
+          <li>
+            <a class="jscBtnOpenModal" href="javascript:void(0)">
+              <i class="fas fa-user-plus"></i>
+            </a>
+            <div class="jscBackgroundLayer backgroundLayer dn"></div>
+            <div class="jscActionModal actionModal editRoomModal detail dn">
+              <form action="">
+                <dl class="createRoomConditions">
+                  <dt>招待メンバー</dt>
+                  <dd>
+                    <div class="createRoomMember">
+                      <ul class="createRoomMemberList">
+                        <li>名字 名前<i class="fas fa-times"></i></li>
+                        <li>名字 名前<i class="fas fa-times"></i></li>
+                        <li>名字 名前<i class="fas fa-times"></i></li>
+                      </ul>
+                    </div>
+                    <p class="numberOfSelected">1 名</p>
+                  </dd>
+                </dl>
+                <div class="selectAll buttonWrap">
+                  <a href="javascript:void(0)" class="button">全選択</a>
+                </div>
+                <ul class="selectMemberList">
+                  <li>
+                    <input type="checkbox" name="selectMember" id="userId1" class="selectMemberCheck">
+                    <label for="userId1" class="selectMember">名字 名前</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="selectMember" id="userId2" class="selectMemberCheck">
+                    <label for="userId2" class="selectMember">名字 名前</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="selectMember" id="userId3" class="selectMemberCheck">
+                    <label for="userId3" class="selectMember">名字 名前</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="selectMember" id="userId4" class="selectMemberCheck">
+                    <label for="userId4" class="selectMember">名字 名前</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="selectMember" id="userId5" class="selectMemberCheck">
+                    <label for="userId5" class="selectMember">名字 名前</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="selectMember" id="userId6" class="selectMemberCheck">
+                    <label for="userId6" class="selectMember">名字 名前</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="selectMember" id="userId7" class="selectMemberCheck">
+                    <label for="userId7" class="selectMember">名字 名前</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="selectMember" id="userId8" class="selectMemberCheck">
+                    <label for="userId8" class="selectMember">名字 名前</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="selectMember" id="userId9" class="selectMemberCheck">
+                    <label for="userId9" class="selectMember">名字 名前</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="selectMember" id="userId10" class="selectMemberCheck">
+                    <label for="userId10" class="selectMember">名字 名前</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="selectMember" id="userId11" class="selectMemberCheck">
+                    <label for="userId11" class="selectMember">名字 名前</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="selectMember" id="userId12" class="selectMemberCheck">
+                    <label for="userId12" class="selectMember">名字 名前</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="selectMember" id="userId13" class="selectMemberCheck">
+                    <label for="userId13" class="selectMember">名字 名前</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="selectMember" id="userId14" class="selectMemberCheck">
+                    <label for="userId14" class="selectMember">名字 名前</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="selectMember" id="userId15" class="selectMemberCheck">
+                    <label for="userId15" class="selectMember">名字 名前</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="selectMember" id="userId16" class="selectMemberCheck">
+                    <label for="userId16" class="selectMember">名字 名前</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="selectMember" id="userId17" class="selectMemberCheck">
+                    <label for="userId17" class="selectMember">名字 名前</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="selectMember" id="userId18" class="selectMemberCheck">
+                    <label for="userId18" class="selectMember">名字 名前</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="selectMember" id="userId19" class="selectMemberCheck">
+                    <label for="userId19" class="selectMember">名字 名前</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="selectMember" id="userId20" class="selectMemberCheck">
+                    <label for="userId20" class="selectMember">名字 名前</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="selectMember" id="userId21" class="selectMemberCheck">
+                    <label for="userId21" class="selectMember">名字 名前</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="selectMember" id="userId22" class="selectMemberCheck">
+                    <label for="userId22" class="selectMember">名字 名前</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="selectMember" id="userId23" class="selectMemberCheck">
+                    <label for="userId23" class="selectMember">名字 名前</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="selectMember" id="userId24" class="selectMemberCheck">
+                    <label for="userId24" class="selectMember">名字 名前</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="selectMember" id="userId25" class="selectMemberCheck">
+                    <label for="userId25" class="selectMember">名字 名前</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="selectMember" id="userId26" class="selectMemberCheck">
+                    <label for="userId26" class="selectMember">名字 名前</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="selectMember" id="userId27" class="selectMemberCheck">
+                    <label for="userId27" class="selectMember">名字 名前</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="selectMember" id="userId28" class="selectMemberCheck">
+                    <label for="userId28" class="selectMember">名字 名前</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="selectMember" id="userId29" class="selectMemberCheck">
+                    <label for="userId29" class="selectMember">名字 名前</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="selectMember" id="userId30" class="selectMemberCheck">
+                    <label for="userId30" class="selectMember">名字 名前</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="selectMember" id="userId31" class="selectMemberCheck">
+                    <label for="userId31" class="selectMember">名字 名前</label>
+                  </li>
+                </ul>
+                <div class="submitCreateRoom buttonWrap">
+                  <button class="btnSubmitCreateRoom button">招待</button>
+                </div>
+              </form>
+            </div>
           </li>
-          <li class="modalClassSyncer exit" onclick="openModal('exit');">
-            <i class="fas fa-times"></i>
+          <li>
+            <a class="jscBtnOpenModal" href="javascript:void(0)">
+              <i class="fas fa-times"></i>
+            </a>
+            <div class="actionModal modal-syncer modal-content dn">
+              <p class="descriptionAction">ルームから退出しますか？</p>
+              <ul class="actionBtn">
+                <li class="btnCancel buttonWrap">
+                  <a href="#" class="jscBtnCancel button">キャンセル</a>
+                </li>
+                <li class="btnSubmit buttonWrap">
+                  <a href="#" class="button">退出</a>
+                </li>
+              </ul>
+            </div>
           </li>
         </ul>
       </div>
@@ -84,71 +324,6 @@
         </div>
       </div>
     </main>
-    <div class="actionModal memberModal detail modal-syncer modal-content" data-target="memberList" id="memberList">
-      <p class="modalTtl">参加者一覧</p>
-      <ul class="roomMemberList">
-        <li>
-          <i class="fas fa-crown icnCrown"></i>
-          <p class="joinedRoomMember active">$メンバー名</p>
-        </li>
-        <li>
-          <p class="joinedRoomMember active">$メンバー名</p>
-        </li>
-        <li>
-          <p class="joinedRoomMember active">$メンバー名</p>
-        </li>
-        <li>
-          <p class="joinedRoomMember active">$メンバー名</p>
-        </li>
-        <li>
-          <p class="joinedRoomMember active">$メンバー名</p>
-        </li>
-        <li>
-          <p class="joinedRoomMember active">$メンバー名</p>
-        </li>
-      </ul>
-      <div class="submitCreateRoom buttonWrap">
-        <button class="btnSubmitCreateRoom button">閉じる</button>
-      </div>
-    </div>
-    <div class="detail modal-syncer modal-content dn">
-      <p class="modalTtl">参加者管理</p>
-    </div>
-    <div class="actionModal editRoomModal detail modal-syncer modal-content dn" data-target="invite" id="invite">
-      <p class="modalTtl">参加者招待</p>
-      <form action="">
-        <dl class="createRoomConditions">
-          <dt>招待メンバー</dt>
-          <dd>
-            <div class="createRoomMember">
-              <ul class="createRoomMemberList">
-                <li>名字 名前<i class="fas fa-times"></i></li>
-                <li>名字 名前<i class="fas fa-times"></i></li>
-                <li>名字 名前<i class="fas fa-times"></i></li>
-              </ul>
-            </div>
-            <p class="numberOfSelected">1 名</p>
-          </dd>
-        </dl>
-        <div class="selectAll buttonWrap">
-          <a href="javascript:void(0)" class="button">全選択</a>
-        </div>
-        <ul class="selectMemberList">
-          <li>
-            <input type="checkbox" name="selectMember" id="userId1" class="selectMemberCheck">
-            <label for="userId1" class="selectMember">名字 名前</label>
-          </li>
-        </ul>
-        <div class="submitCreateRoom buttonWrap">
-          <button class="btnSubmitCreateRoom button">追加</button>
-        </div>
-      </form>
-    </div>
-    <div class="detail modal-syncer modal-content dn" data-target="exit" id="exit">
-      <p>ルームから退出しますか？</p>
-      <button>キャンセル</button>
-      <button>OK</button>
-    </div>
   </div>
   <script type="text/javascript" src="/js/jquery-3.5.1.min.js"></script>
   <script type="text/javascript" src="/js/common.js"></script>
