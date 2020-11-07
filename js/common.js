@@ -51,13 +51,17 @@ VCAPTION.SHOW_ROOM_DETAIL = {
     this.$btnShowRoomDetail.on('click', function (e) {
       this.$btnRoomDetail = $('.jscRoomDetail');
       var roomDetailWrap = $(this).next('.jscRoomDetail');
-      this.$btnRoomDetail.removeClass('open');
-      roomDetailWrap.addClass('open');
+
+      if(!roomDetailWrap.hasClass('open')){
+        this.$btnRoomDetail.removeClass('open');
+        roomDetailWrap.addClass('open');
+      }
     });
   },
   closeRoomDetail: function () {
     this.$btnCloseRoomDetail.on('click', function (e) {
       var roomDetailWrap = $(this).parents('.jscRoomDetail');
+
       roomDetailWrap.removeClass('open');
     });
   }
@@ -112,7 +116,6 @@ VCAPTION.EDIT_ROOM_NAME = {
       var saveRoomName = _self.parent(this.$saveRoomName);
       var btnEditRoomName = saveRoomName.prev(this.$btnEditRoomName);
       var editRoomName = btnEditRoomName.prev(this.$editRoomName);
-      console.log(editRoomName);
 
       saveRoomName.addClass('dn');
       btnEditRoomName.removeClass('dn');
