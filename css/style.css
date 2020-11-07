@@ -861,16 +861,22 @@ main {
   height: 20px;
   background: #ffffff;
 }
-.chatActionBtn > li > i {
+.chatActionBtn > li > a {
+  height: 50px;
+}
+.chatActionBtn > li > a > i {
   font-size: 30px;
   color: #ffffff;
 }
-.chatActionBtn > li:after {
+.chatActionBtn > li > a:after {
   content: '';
   display: inline-block;
   width: 0;
   height: 100%;
   vertical-align: middle;
+}
+button.chatActionModalIcn {
+  background-color: rgba(0,0,0,0.6);
 }
 .chatAndCaptionBox {
   display: flex;
@@ -984,3 +990,45 @@ main {
 .submitBtn:active {
   height: 29px;
 }
+.modalTtl {
+  font-weight: bold;
+  font-size: 18px;
+}
+.memberModal {
+  width: 400px;
+  height: 500px;
+}
+
+.chatRoomMemberList {
+  margin-top: 20px;
+  height: calc(100vh - 648px);
+  overflow: auto;
+}
+.chatRoomMemberList > li {
+  display: flex;
+  position: relative;
+  padding-right: 50px;
+  padding-left: 38px;
+}
+.chatRoomMemberList > li + li {
+  margin-top: 10px;
+}
+.muteOnOff {
+  position: absolute;
+  right: 16px;
+  width: 18px;
+  font-size: 24px;
+  color: #000;
+}
+.micBtnList > li + li {
+  margin: 0 15px;
+}
+.muteMic {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+  background-color: #fbd09d;
+}
+
