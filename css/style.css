@@ -211,8 +211,8 @@ a:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 500px;
-  height: 300px;
+  width: 400px;
+  height: 250px;
   padding: 30px 50px;
   background: #ffffff;
   border: 1px solid #777777;
@@ -227,6 +227,7 @@ a:hover {
 .editRoomModal {
   width: 700px;
   height: 450px;
+  text-align: left;
 }
 .buttonWrap {
   display: flex;
@@ -758,41 +759,54 @@ a:hover {
 
 
 .actionBtn {
+  display: flex;
+  justify-content: center;
   text-align: center;
 }
 .actionBtn > li {
-  display: inline-block;
   width: 100px;
   height: 40px;
+  font-size: 16px;
+  line-height: 36px;
+  border-radius:4px;
 }
 .actionBtn > li > a {
-  display: inline-block;
   width: 100px;
-  height: 40px;
+  height: 38px;
+  transition: none;
+}
+.actionBtn > li + li {
+  margin-left: 10px;
 }
 .descriptionAction {
+  height: 100px;
   text-align: center;
 }
 .btnCancel {
-  background: #deda1f;
-  border-bottom-color: #737112;
-  line-height: 34px;
-}
-.btnCancel:active {
-  height: 35px;
+  height: 38px;
+  background-color: #888888;
+  border-bottom-color: #333333;
+  color: #ffffff;
 }
 .btnSubmit {
-  background: #62cc7a;
+  background-color: #e8e790;
+  border-bottom-color: #908e2a;
+}
+.btnOk {
+  background-color: #62cc7a;
   border-bottom-color: #337141;
-  line-height: 34px;
 }
-.btnSubmit:active {
-  height: 35px;
+.btnDelete {
+  background-color: #cc4247;
+  border-bottom-color: #792023;
+  color: #ffffff;
 }
-
-
-
-
+.btnCancel:active,
+.btnSubmit:active,
+.btnOk:active,
+.btnDelete:active {
+  height: 36px;
+}
 
 
 
@@ -860,16 +874,22 @@ main {
   height: 20px;
   background: #ffffff;
 }
-.chatActionBtn > li > i {
+.chatActionBtn > li > a {
+  height: 50px;
+}
+.chatActionBtn > li > a > i {
   font-size: 30px;
   color: #ffffff;
 }
-.chatActionBtn > li:after {
+.chatActionBtn > li > a:after {
   content: '';
   display: inline-block;
   width: 0;
   height: 100%;
   vertical-align: middle;
+}
+button.chatActionModalIcn {
+  background-color: rgba(0,0,0,0.6);
 }
 .chatAndCaptionBox {
   display: flex;
