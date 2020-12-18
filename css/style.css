@@ -840,6 +840,7 @@ main {
   position: absolute;
   left: 50%;
   height: 100%;
+  background-size: cover;
   transform: translate(-50%);
 }
 .chatActionBtn {
@@ -922,6 +923,9 @@ button.chatActionModalIcn {
 }
 .memberChatTxt > .memberTalk {
   height: calc(100% - 42px);
+}
+.memberTalk > li.own {
+  text-align: right;
 }
 .memberTalk > li + li {
   margin-top: 20px;
